@@ -39,8 +39,10 @@ export function SiteNav() {
                 href={link.href}
                 prefetch={false}
                 className={cn(
-                  "min-h-[44px] px-2 py-2 text-center text-[11px] uppercase text-[var(--fg-muted)] transition sm:text-xs",
-                  active && "bg-[var(--accent)] text-[var(--fg)]",
+                  "flex min-h-[44px] items-center justify-center rounded-md px-2 py-2 text-center text-[11px] uppercase transition-all duration-200 sm:text-xs",
+                  active
+                    ? "bg-[var(--accent)] font-medium text-[var(--fg)] shadow-sm"
+                    : "text-[var(--fg-muted)] hover:bg-[var(--accent)]/10 hover:text-[var(--fg)]",
                 )}
                 style={{ letterSpacing: "var(--tracking-label)" }}
               >

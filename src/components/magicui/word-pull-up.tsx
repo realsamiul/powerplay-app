@@ -9,7 +9,7 @@ type Props = {
 };
 
 export function WordPullUp({ words, className }: Props) {
-  const groups = words.match(/.{1,3}/g) ?? [words];
+  const wordsArray = words.split(" ");
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -19,25 +19,25 @@ export function WordPullUp({ words, className }: Props) {
     }
     const id = window.setTimeout(
       () => window.dispatchEvent(new CustomEvent("headlineComplete")),
-      Math.max(300, groups.length * 35 + 560),
+      Math.max(300, wordsArray.length * 50 + 560),
     );
     return () => window.clearTimeout(id);
-  }, [groups.length, reduceMotion]);
+  }, [wordsArray.length, reduceMotion]);
 
   return (
     <h1 className={className} aria-label={words} style={{ letterSpacing: "var(--tracking-display)" }}>
-      {groups.map((chunk, index) => (
-        <span key={`${chunk}-${index}`} className="inline-block overflow-hidden" aria-hidden="true">
+      {wordsArray.map((word, index) => (
+        <span key={`${word}-${index}`} className="inline-block overflow-hidden pr-[0.25em]" aria-hidden="true">
           {reduceMotion ? (
-            <span className="inline-block">{chunk}</span>
+            <span className="inline-block">{word}</span>
           ) : (
             <motion.span
               initial={{ y: "105%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.55, delay: index * 0.02, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.55, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
               className="inline-block"
             >
-              {chunk}
+              {word}
             </motion.span>
           )}
         </span>
