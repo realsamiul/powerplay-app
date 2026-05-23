@@ -1,76 +1,70 @@
 import Link from "next/link";
-import { ArrowRight, Binary, Radar, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Marquee } from "@/components/magicui/marquee";
 import { DotPattern } from "@/components/magicui/dot-pattern";
 import { WordPullUp } from "@/components/magicui/word-pull-up";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { ADVANCED_INSIGHTS, OPTA_STATS } from "@/lib/cricsight-data";
+import { homeContent } from "@/lib/site-content";
 
 export default function Home() {
-  const featuredStats = OPTA_STATS.slice(0, 3);
-  const featuredInsights = ADVANCED_INSIGHTS.slice(0, 3);
-
   return (
-    <div className="relative mx-auto max-w-[1200px] px-4 pb-20 md:px-8">
+    <div className="relative pb-28">
       <DotPattern />
-      <section className="relative py-16 md:py-24">
-        <BlurFade>
-          <p className="mb-4 text-xs uppercase tracking-[0.16em] text-zinc-400">Model-driven Cricket Intelligence</p>
-          <WordPullUp
-            words="CRICSIGHT CONTROL ROOM"
-            className="max-w-4xl text-4xl font-semibold uppercase leading-[0.92] tracking-tight text-white md:text-7xl"
-          />
-          <p className="mt-6 max-w-2xl text-sm leading-7 text-zinc-400 md:text-base">
-            Real-time Opta stats, pressure-pattern diagnostics, and architecture-level traceability across every insight card.
-          </p>
+      <section className="relative mx-auto min-h-[78vh] max-w-[1400px] px-5 pt-20 md:px-10 md:pt-28">
+        <div className="absolute inset-x-5 top-14 h-[1px] bg-white/10 md:inset-x-10" />
+        <BlurFade className="max-w-6xl">
+          <p className="mb-6 text-xs uppercase tracking-[0.2em] text-zinc-500">CricSight Intelligence</p>
+          <WordPullUp words={homeContent.hero.headline} className="text-5xl font-semibold uppercase leading-[0.88] tracking-tight text-white md:text-8xl" />
+          <p className="mt-6 max-w-2xl text-xl leading-relaxed text-zinc-200">{homeContent.hero.subHeadline}</p>
+          <p className="mt-8 max-w-3xl text-base leading-8 text-zinc-400 md:text-lg">{homeContent.hero.body}</p>
+        </BlurFade>
+        <BlurFade delay={0.2} className="mt-14">
+          <Marquee className="border-y border-white/10 py-3">
+            {homeContent.ticker.map((item) => (
+              <span key={item} className="mr-3 border border-white/10 bg-white/[0.04] px-6 py-2 text-xs uppercase tracking-[0.14em] text-zinc-200">
+                {item}
+              </span>
+            ))}
+          </Marquee>
         </BlurFade>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-3">
-        {[
-          { label: "Total Opta Stats", value: OPTA_STATS.length, icon: Radar },
-          { label: "Deep Insight Cards", value: ADVANCED_INSIGHTS.length, icon: Binary },
-          { label: "Model Techniques", value: 5, icon: Sparkles },
-        ].map((kpi, index) => (
-          <BlurFade key={kpi.label} delay={index * 0.06} className="border border-white/10 bg-white/[0.03] p-5">
-            <kpi.icon className="mb-3 h-4 w-4 text-zinc-300" />
-            <p className="text-xs uppercase tracking-[0.11em] text-zinc-400">{kpi.label}</p>
-            <p className="mt-2 text-3xl font-semibold tracking-tight text-white">{kpi.value}</p>
-          </BlurFade>
-        ))}
+      <section className="mx-auto mt-24 max-w-[1400px] px-5 md:px-10">
+        <BlurFade className="grid gap-10 border border-white/10 bg-white/[0.02] p-8 md:grid-cols-[1.15fr_1fr] md:p-12">
+          <div>
+            <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">Paradigm Shift</p>
+            <h2 className="mt-5 max-w-xl text-3xl font-semibold leading-tight tracking-tight text-white md:text-5xl">{homeContent.paradigm.headline}</h2>
+          </div>
+          <p className="text-base leading-8 text-zinc-400 md:text-lg">{homeContent.paradigm.body}</p>
+        </BlurFade>
       </section>
 
-      <section className="mt-12 grid gap-6 lg:grid-cols-2">
-        <BlurFade className="border border-white/10 bg-white/[0.03] p-6">
-          <div className="mb-5 flex items-center justify-between">
-            <h2 className="text-lg font-semibold tracking-tight text-white">Stats Preview</h2>
-            <Link href="/insights" className="inline-flex items-center gap-1 text-xs uppercase tracking-[0.12em] text-zinc-300">
-              View All <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
-          </div>
-          <div className="space-y-3">
-            {featuredStats.map((stat) => (
-              <article key={stat.stat_id} className="border border-white/10 bg-black/40 p-3">
-                <p className="text-[11px] uppercase tracking-[0.08em] text-zinc-500">{stat.player} · {stat.metric}</p>
-                <p className="mt-1 text-sm leading-6 text-zinc-300">{stat.fact}</p>
-              </article>
-            ))}
-          </div>
-        </BlurFade>
+      <section className="mx-auto mt-16 max-w-[1400px] px-5 md:px-10">
+        <div className="grid gap-5 md:grid-cols-3">
+          {homeContent.features.map((feature, index) => (
+            <BlurFade key={feature.title} delay={index * 0.08} className="border border-white/10 bg-black/55 p-7 md:p-8">
+              <p className="text-[11px] uppercase tracking-[0.14em] text-zinc-500">{feature.label}</p>
+              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">{feature.title}</h3>
+              <p className="mt-4 text-sm leading-7 text-zinc-400 md:text-base">{feature.copy}</p>
+            </BlurFade>
+          ))}
+        </div>
+      </section>
 
-        <BlurFade delay={0.08} className="border border-white/10 bg-white/[0.03] p-6">
-          <div className="mb-5 flex items-center justify-between">
-            <h2 className="text-lg font-semibold tracking-tight text-white">Architecture Preview</h2>
-            <Link href="/architecture" className="inline-flex items-center gap-1 text-xs uppercase tracking-[0.12em] text-zinc-300">
-              Open <ArrowRight className="h-3.5 w-3.5" />
+      <section className="mx-auto mt-20 max-w-[1400px] px-5 md:px-10">
+        <BlurFade className="border border-white/10 bg-white/[0.02] px-7 py-12 md:px-12 md:py-16">
+          <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">Bottom Line</p>
+          <h2 className="mt-4 max-w-3xl text-4xl font-semibold uppercase leading-[0.92] tracking-tight text-white md:text-6xl">
+            {homeContent.cta.headline}
+          </h2>
+          <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-400 md:text-lg">{homeContent.cta.body}</p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link href="/architecture" className="inline-flex items-center gap-2 border border-white/15 bg-white/5 px-6 py-3 text-sm uppercase tracking-[0.12em] text-white">
+              Explore the Architecture <ArrowRight className="h-4 w-4" />
             </Link>
-          </div>
-          <div className="space-y-3">
-            {featuredInsights.map((insight) => (
-              <article key={insight.card_id} className="border border-white/10 bg-black/40 p-3">
-                <p className="text-[11px] uppercase tracking-[0.08em] text-zinc-500">{insight.technique}</p>
-                <p className="mt-1 text-sm font-medium tracking-tight text-zinc-200">{insight.headline}</p>
-              </article>
-            ))}
+            <Link href="/insights" className="inline-flex items-center gap-2 border border-white/10 px-6 py-3 text-sm uppercase tracking-[0.12em] text-zinc-300">
+              View Insights
+            </Link>
           </div>
         </BlurFade>
       </section>
