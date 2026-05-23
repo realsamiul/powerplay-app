@@ -5,11 +5,17 @@ import { useEffect, useState } from "react";
 
 export function SitePreloader() {
   const reduceMotion = useReducedMotion();
-  const [visible, setVisible] = useState(() => {
-    if (typeof window === "undefined") return true;
-    return sessionStorage.getItem("cricsight-loaded") !== "true";
-  });
+  const [visible, setVisible] = useState(true);
   const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      if (sessionStorage.getItem("cricsight-loaded") === "true") {
+        setVisible(false);
+      }
+    }, 0);
+    return () => window.clearTimeout(id);
+  }, []);
 
   useEffect(() => {
     if (!visible) return;

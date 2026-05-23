@@ -5,7 +5,7 @@ import { Activity, BarChart3, TrendingDown, Trophy, WandSparkles } from "lucide-
 import { Badge } from "@/components/ui/badge";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Marquee } from "@/components/magicui/marquee";
-import { WordPullUp } from "@/components/magicui/word-pull-up";
+import { SlotHeadline } from "@/components/slot-headline";
 import { ADVANCED_INSIGHTS, OPTA_STATS, type AdvancedInsight } from "@/lib/cricsight-data";
 import { TECHNIQUE_COPY } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -49,17 +49,22 @@ export default function InsightsPage() {
 
   return (
     <div className="mx-auto max-w-[1700px] px-4 pb-20 pt-12 sm:px-8 md:px-12 lg:px-16">
-      <section className="pb-8">
+      <section className="pb-12">
         <BlurFade variant="full">
           <p className="flex items-center gap-3 font-mono text-[11px] uppercase text-[var(--fg-faint)]" style={{ letterSpacing: "var(--tracking-label)" }}>
             <span>03 / Insights</span>
             <span className="h-px w-full bg-[var(--border-visible)]" />
           </p>
-          <WordPullUp words="CRICSIGHT INTELLIGENCE" className="mt-5 text-[clamp(56px,10vw,168px)] leading-[0.86] text-[var(--fg)]" />
+          <SlotHeadline
+            text="CRICSIGHT INTELLIGENCE"
+            elementTag="h1"
+            triggerOnMount
+            className="mt-5 text-[clamp(56px,10vw,168px)] leading-[0.86] text-[var(--fg)]"
+          />
         </BlurFade>
       </section>
 
-      <section className="space-y-2 pb-16">
+      <section className="space-y-2 pb-20 pt-4">
         <Marquee duration="36s">
           {OPTA_STATS.map((stat) => (
             <span
@@ -83,7 +88,7 @@ export default function InsightsPage() {
       </section>
 
       <section className="pb-16">
-        <div className="grid grid-cols-12 gap-8 lg:gap-12">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           {visibleInsights.map((insight, index) => {
             const Icon = techniqueIcons[insight.technique];
             return (
@@ -94,7 +99,7 @@ export default function InsightsPage() {
                 className={cn(getSpanClass(index), "group")}
               >
                 <article
-                  className="flex h-full flex-col justify-between rounded-2xl p-6 transition-colors duration-300 hover:bg-[var(--surface-0)] sm:p-8"
+                  className="flex h-full flex-col justify-between rounded-2xl p-7 transition-colors duration-300 hover:bg-[var(--surface-2)] sm:p-10"
                   aria-labelledby={`insight-${insight.card_id}`}
                 >
                   <div className="flex flex-col gap-6">
@@ -118,7 +123,7 @@ export default function InsightsPage() {
                     </div>
                   </div>
 
-                  <div className="mt-12 flex items-center gap-3 border-t border-[var(--border-subtle)] pt-6">
+                  <div className="mt-8 flex items-center gap-3 border-t border-[var(--border-subtle)] pt-6">
                     <Badge variant="outline" className="bg-transparent text-[11px] uppercase tracking-widest text-[var(--fg-faint)]">
                       {TECHNIQUE_COPY[insight.technique]}
                     </Badge>

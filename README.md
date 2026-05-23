@@ -1,5 +1,11 @@
 # CricSight PowerPlay
 
+## Hero Background
+
+Add a high-resolution image at `/public/hero-bg.jpg` (recommended: 2400x1600px, landscape).
+The image will appear full-bleed behind the white text panel on the homepage.
+The panel uses backdrop-blur and white/92 opacity, so the image should have strong visual texture or content at the edges, not the center.
+
 Three-route Next.js app:
 - `/` Home
 - `/insights`

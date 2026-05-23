@@ -25,7 +25,11 @@ export function WordPullUp({ words, className }: Props) {
   }, [wordsArray.length, reduceMotion]);
 
   return (
-    <h1 className={className} aria-label={words} style={{ letterSpacing: "var(--tracking-display)" }}>
+    <h1
+      className={className}
+      aria-label={words}
+      style={{ letterSpacing: "var(--tracking-display)", fontFamily: "var(--font-display)" }}
+    >
       {wordsArray.map((word, index) => (
         <span key={`${word}-${index}`} className="inline-block overflow-hidden pr-[0.25em]" aria-hidden="true">
           {reduceMotion ? (

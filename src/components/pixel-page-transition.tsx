@@ -33,7 +33,7 @@ export function PixelPageTransition() {
       {transitionKey ? (
         <motion.div
           key={transitionKey}
-          className="pointer-events-none fixed inset-0 z-[60] bg-[rgba(8,8,5,0.68)]"
+          className="pointer-events-none fixed inset-0 z-[60] bg-[rgba(244,239,230,0.7)]"
           initial="hidden"
           animate="exit"
           exit="done"
@@ -54,7 +54,7 @@ export function PixelPageTransition() {
             {Array.from({ length: BLOCKS }).map((_, i) => (
               <motion.div
                 key={i}
-                className="bg-[var(--accent)]"
+                className="bg-[var(--fg)]"
                 variants={{
                   hidden: { opacity: 0, scale: 0.2 },
                   exit: {

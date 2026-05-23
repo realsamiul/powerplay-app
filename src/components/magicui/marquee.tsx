@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import type { CSSProperties } from "react";
 
 type MarqueeProps = {
   children: React.ReactNode;
@@ -15,7 +16,7 @@ export function Marquee({ children, reverse, className, duration = "40s" }: Marq
           "flex min-w-max py-0 [animation:marquee_var(--marquee-duration)_linear_infinite] [transform:translateZ(0)] [will-change:transform]",
           reverse && "[animation-direction:reverse]",
         )}
-        style={{ ["--marquee-duration" as string]: duration }}
+        style={{ "--marquee-duration": duration } as CSSProperties}
       >
         <div className="flex min-w-max gap-4 pr-4">{children}</div>
         <div className="flex min-w-max gap-4 pr-4" aria-hidden="true">

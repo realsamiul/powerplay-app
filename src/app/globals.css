@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #080805;
-  --fg: #f0ece4;
-  --fg-muted: #7a7268;
-  --fg-faint: #3a3830;
+  --bg: #F4EFE6;
+  --bg-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
+  --fg: #1a1814;
+  --fg-muted: #6b6459;
+  --fg-faint: #b0a898;
   --accent: #006a4e;
-  --accent-bright: #00a878;
-  --accent-dim: rgba(0, 106, 78, 0.15);
-  --surface-0: #080805;
-  --surface-1: #111109;
-  --surface-2: #1a1a16;
-  --surface-hover: #222218;
-  --border-subtle: rgba(240, 236, 228, 0.06);
-  --border-visible: rgba(240, 236, 228, 0.12);
-  --border-accent: rgba(0, 106, 78, 0.4);
+  --accent-bright: #008a65;
+  --accent-dim: rgba(0, 106, 78, 0.12);
+  --surface-0: #F4EFE6;
+  --surface-1: #EDE8DC;
+  --surface-2: #E5DFD2;
+  --surface-hover: #DDD7C9;
+  --border-subtle: rgba(26, 24, 20, 0.08);
+  --border-visible: rgba(26, 24, 20, 0.16);
+  --border-accent: rgba(0, 106, 78, 0.35);
   --tracking-display: -0.02em;
   --tracking-heading: -0.01em;
   --tracking-body: 0em;
@@ -33,10 +34,13 @@ html {
 
 body {
   background: var(--bg);
+  background-image: var(--bg-grain);
+  background-repeat: repeat;
   color: var(--fg);
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
   letter-spacing: var(--tracking-body);
+  line-height: 1.7;
 }
 
 * {
@@ -58,6 +62,20 @@ summary {
 
 .text-balance {
   text-wrap: balance;
+}
+
+.section-gap {
+  padding-top: clamp(64px, 8vw, 120px);
+  padding-bottom: clamp(48px, 6vw, 96px);
+}
+
+h1,
+h2 {
+  line-height: 0.9;
+}
+
+p {
+  max-width: 75ch;
 }
 
 @keyframes marquee {
