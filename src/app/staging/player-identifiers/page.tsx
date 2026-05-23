@@ -1,5 +1,12 @@
 import { UNIQUE_PLAYER_NAMES } from "@/lib/cricsight-data";
 
+export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function PlayerIdentifiersPage() {
   return (
     <div className="mx-auto max-w-[1000px] px-6 pb-28 pt-16">

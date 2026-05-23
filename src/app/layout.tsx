@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
-import { PixelPageTransition } from "@/components/pixel-page-transition";
-import { SitePreloader } from "@/components/site-preloader";
+import { ClientOverlays } from "@/components/client-overlays";
 import { SiteNav } from "@/components/site-nav";
 import { fontPresetClass } from "@/lib/theme";
 import "./globals.css";
@@ -42,9 +41,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${inter.variable} ${fontPresetClass} h-full antialiased`}
     >
       <body className="min-h-full bg-black text-white">
-        <SitePreloader />
+        <ClientOverlays />
         <div className="grain-overlay" />
-        <PixelPageTransition />
         <SiteNav />
         <main className="pb-28">{children}</main>
       </body>

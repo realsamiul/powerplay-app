@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 type BlurFadeProps = {
   children: React.ReactNode;
@@ -9,6 +9,12 @@ type BlurFadeProps = {
 };
 
 export function BlurFade({ children, delay = 0, className }: BlurFadeProps) {
+  const reduceMotion = useReducedMotion();
+
+  if (reduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       className={className}

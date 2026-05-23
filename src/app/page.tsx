@@ -14,7 +14,7 @@ export default function Home() {
         <div className="absolute inset-x-5 top-14 h-[1px] bg-white/10 md:inset-x-10" />
         <BlurFade className="max-w-6xl">
           <p className="mb-6 text-xs uppercase tracking-[0.2em] text-zinc-500">CricSight Intelligence</p>
-          <WordPullUp words={homeContent.hero.headline} className="text-5xl font-semibold uppercase leading-[0.88] tracking-tight text-white md:text-8xl" />
+          <WordPullUp words={homeContent.hero.headline} className="text-4xl font-semibold uppercase leading-[0.9] tracking-tight text-white sm:text-5xl md:text-8xl" />
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-zinc-200">{homeContent.hero.subHeadline}</p>
           <p className="mt-8 max-w-3xl text-base leading-8 text-zinc-400 md:text-lg">{homeContent.hero.body}</p>
         </BlurFade>

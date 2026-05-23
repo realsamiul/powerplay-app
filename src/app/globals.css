@@ -56,6 +56,15 @@ body {
   mask-image: radial-gradient(circle at center, black, transparent 85%);
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 1ms !important;

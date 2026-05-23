@@ -20,7 +20,7 @@ export default function ArchitecturePage() {
           <p className="mb-5 text-xs uppercase tracking-[0.18em] text-zinc-500">Architecture</p>
           <WordPullUp
             words={architectureContent.hero.headline}
-            className="max-w-6xl text-5xl font-semibold uppercase leading-[0.88] tracking-tight md:text-8xl"
+            className="max-w-6xl text-4xl font-semibold uppercase leading-[0.9] tracking-tight sm:text-5xl md:text-8xl"
           />
           <p className="mt-6 text-xl leading-relaxed text-zinc-200">{architectureContent.hero.subHeadline}</p>
           <p className="mt-6 max-w-3xl text-base leading-8 text-zinc-400 md:text-lg">{architectureContent.hero.body}</p>
@@ -47,7 +47,7 @@ export default function ArchitecturePage() {
           <div className="mt-6 space-y-3">
             {countByTechnique.map((row, index) => (
               <BlurFade key={row.label} delay={0.03 * index}>
-                <div className="grid grid-cols-[180px_1fr_56px] items-center gap-3">
+                <div className="grid gap-2 sm:grid-cols-[180px_1fr_56px] sm:items-center sm:gap-3">
                   <p className="text-xs uppercase tracking-[0.1em] text-zinc-500">{row.label}</p>
                   <div className="h-2 bg-white/10">
                     <div className="h-full bg-white/85" style={{ width: `${Math.max(6, (row.count / ADVANCED_INSIGHTS.length) * 100)}%` }} />

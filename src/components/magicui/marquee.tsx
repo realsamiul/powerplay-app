@@ -11,19 +11,15 @@ export function Marquee({ children, reverse, className }: MarqueeProps) {
     <div className={cn("relative overflow-hidden", className)}>
       <div
         className={cn(
-          "flex min-w-max gap-4 py-2 [animation:marquee_34s_linear_infinite]",
+          "flex min-w-max py-2 [animation:marquee_34s_linear_infinite]",
           reverse && "[animation-direction:reverse]",
         )}
       >
-        {children}
-        {children}
+        <div className="flex min-w-max gap-4 pr-4">{children}</div>
+        <div className="flex min-w-max gap-4 pr-4" aria-hidden="true">
+          {children}
+        </div>
       </div>
-      <style>{`
-        @keyframes marquee {
-          from { transform: translateX(0%); }
-          to { transform: translateX(-50%); }
-        }
-      `}</style>
     </div>
   );
 }

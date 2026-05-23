@@ -61,7 +61,7 @@ export default function InsightsPage() {
           {ADVANCED_INSIGHTS.map((insight, index) => {
             const Icon = techniqueIcons[insight.technique];
             return (
-              <BlurFade key={insight.card_id} delay={0.02 * (index % 9)}>
+              <BlurFade key={insight.card_id} delay={0.02 * (index % 9)} className="[contain-intrinsic-size:360px] [content-visibility:auto]">
                 <MagicCard gradientColor="rgba(255,255,255,0.05)" className="h-full">
                   <div className="mb-4 flex items-center justify-between">
                     <Badge variant="outline">{insight.technique}</Badge>

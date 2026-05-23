@@ -6,7 +6,6 @@ Three-route Next.js app:
 - `/architecture`
 
 Hidden staging routes:
-- `/staging/player-images` (Wikimedia image pull + WebP + QA)
 - `/staging/player-identifiers` (exported unique player names)
 
 ## Local Run
@@ -29,15 +28,9 @@ export const FONT_PRESET = "space-grotesk"; // "geist" | "space-grotesk" | "inte
 - JSON export endpoint: `/api/player-identifiers`
 - Source identifier: exact player name string currently present in the data.
 
-## Image Resolver Notes
+## Player Images
 
-Player images are resolved via:
-1. Wikipedia search: `"<name> international cricketer"`
-2. Wikidata `wikibase_item`
-3. `P18` image
-4. Commons WebP URL (`format=webp`)
-
-If no `P18` exists, image is rejected.
+Player image assets are intentionally not wired yet. Add the direct-download image set later as local optimized assets and map them by the exact player name identifier exported above.
 
 ## Deploy To Vercel
 

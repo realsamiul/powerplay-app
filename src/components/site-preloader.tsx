@@ -1,13 +1,19 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export function SitePreloader() {
+  const reduceMotion = useReducedMotion();
   const [visible, setVisible] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    if (reduceMotion) {
+      const id = window.setTimeout(() => setVisible(false), 250);
+      return () => window.clearTimeout(id);
+    }
+
     const startedAt = Date.now();
     const timer = setInterval(() => {
       const elapsed = Date.now() - startedAt;
@@ -19,7 +25,7 @@ export function SitePreloader() {
       }
     }, 30);
     return () => clearInterval(timer);
-  }, []);
+  }, [reduceMotion]);
 
   return (
     <AnimatePresence>
