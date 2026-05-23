@@ -14,7 +14,7 @@ export function SiteNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed left-1/2 top-6 z-50 w-[min(980px,92vw)] -translate-x-1/2 border border-white/15 bg-black/65 px-3 py-3 backdrop-blur-xl [clip-path:polygon(0_0,calc(100%-24px)_0,100%_24px,100%_100%,24px_100%,0_calc(100%-24px))]">
+    <nav className="fixed bottom-5 left-1/2 z-50 w-[min(980px,94vw)] -translate-x-1/2 border border-white/15 bg-black/75 px-3 py-3 backdrop-blur-xl [clip-path:polygon(0_0,calc(100%-18px)_0,100%_18px,100%_100%,18px_100%,0_calc(100%-18px))]">
       <div className="flex items-center justify-between gap-3">
         <div className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-200">
           Cricsight

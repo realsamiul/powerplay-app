@@ -16,14 +16,14 @@
   --color-surface: var(--surface);
   --color-surface-elevated: var(--surface-elevated);
   --color-border: var(--border);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-primary);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary), Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -32,6 +32,18 @@ body {
 
 .text-balance {
   text-wrap: balance;
+}
+
+.theme-font-geist {
+  --font-primary: var(--font-geist-sans);
+}
+
+.theme-font-space {
+  --font-primary: var(--font-space-grotesk);
+}
+
+.theme-font-inter {
+  --font-primary: var(--font-inter);
 }
 
 .grain-overlay {

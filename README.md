@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CricSight PowerPlay
 
-## Getting Started
+Three-route Next.js app:
+- `/` Home
+- `/insights`
+- `/architecture`
 
-First, run the development server:
+Hidden staging routes:
+- `/staging/player-images` (Wikimedia image pull + WebP + QA)
+- `/staging/player-identifiers` (exported unique player names)
+
+## Local Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev -- -p 3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Font Presets
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Change one value in `src/lib/theme.ts`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```ts
+export const FONT_PRESET = "space-grotesk"; // "geist" | "space-grotesk" | "inter"
+```
 
-## Learn More
+## Player Name Export
 
-To learn more about Next.js, take a look at the following resources:
+- JSON export endpoint: `/api/player-identifiers`
+- Source identifier: exact player name string currently present in the data.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Image Resolver Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Player images are resolved via:
+1. Wikipedia search: `"<name> international cricketer"`
+2. Wikidata `wikibase_item`
+3. `P18` image
+4. Commons WebP URL (`format=webp`)
 
-## Deploy on Vercel
+If no `P18` exists, image is rejected.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy To Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create repository and push:
+
+```bash
+git init
+git add -A
+git commit -m "initial cricsight powerplay"
+git branch -M main
+git remote add origin <your-repo-url>
+git push -u origin main
+```
+
+2. In Vercel:
+- `Add New Project`
+- Import the repository
+- Framework detected: Next.js
+- Build command: `npm run build`
+- Output: default
+
+3. Deploy.
+
+References:
+- https://vercel.com/kb/guide/deploying-next-and-userbase-with-vercel
+- https://vercel.com/academy/ai-summary-app-with-nextjs/deploy-the-app
