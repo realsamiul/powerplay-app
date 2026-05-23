@@ -1,0 +1,226 @@
+[
+  {
+    "stat_id": "bat_sr_ODI_powerplay_True",
+    "player": "Shahid Afridi",
+    "metric": "strike_rate",
+    "value": 170.4,
+    "fact": "No batter capitalizes on field restrictions during ODI victories quite like Shahid Afridi, who boasts a staggering 170.4 strike rate in the powerplay."
+  },
+  {
+    "stat_id": "bowl_econ_ODI_powerplay_True",
+    "player": "S Kotte",
+    "metric": "economy_rate",
+    "value": 1.8,
+    "fact": "S Kotte ruthlessly suffocates top-order scoring during ODI victories, maintaining an incredible 1.8 economy rate throughout the powerplay."
+  },
+  {
+    "stat_id": "bat_sr_ODI_powerplay_False",
+    "player": "GJ Maxwell",
+    "metric": "strike_rate",
+    "value": 142.9,
+    "fact": "Even in defeat, Glenn Maxwell remains a highly disruptive force, maintaining an aggressive 142.9 strike rate against the new ball during ODI powerplays."
+  },
+  {
+    "stat_id": "bowl_econ_ODI_powerplay_False",
+    "player": "S Kotte",
+    "metric": "economy_rate",
+    "value": 1.6,
+    "fact": "S Kotte provides brilliant early containment even in losing causes, locking down the ODI powerplay with a 1.6 economy rate."
+  },
+  {
+    "stat_id": "bat_sr_ODI_middle_True",
+    "player": "S Prasanna",
+    "metric": "strike_rate",
+    "value": 178.5,
+    "fact": "Seekkuge Prasanna injects unmatched momentum through the middle overs of ODI victories, scoring at a blistering strike rate of 178.5."
+  },
+  {
+    "stat_id": "bowl_econ_ODI_middle_True",
+    "player": "ER Oza",
+    "metric": "economy_rate",
+    "value": 2.49,
+    "fact": "ER Oza provides elite middle-overs control in ODI victories, restricting batters to a highly efficient economy rate of 2.49."
+  },
+  {
+    "stat_id": "bat_sr_ODI_middle_False",
+    "player": "AAP Atkinson",
+    "metric": "strike_rate",
+    "value": 152.5,
+    "fact": "AAP Atkinson relentlessly pushes the run rate during the middle overs, operating at a 152.5 strike rate despite ODI defeats."
+  },
+  {
+    "stat_id": "bowl_econ_ODI_middle_False",
+    "player": "NJ Shaw",
+    "metric": "economy_rate",
+    "value": 1.89,
+    "fact": "NJ Shaw anchors the bowling effort during tough ODI losses, yielding a highly restrictive 1.89 economy rate through the middle overs."
+  },
+  {
+    "stat_id": "bat_sr_ODI_death_True",
+    "player": "LS Livingstone",
+    "metric": "strike_rate",
+    "value": 215.2,
+    "fact": "Liam Livingstone redefines late-innings finishing with a phenomenal 215.2 strike rate during the death overs of successful ODI run chases."
+  },
+  {
+    "stat_id": "bowl_econ_ODI_death_True",
+    "player": "MJ Clarke",
+    "metric": "economy_rate",
+    "value": 4.43,
+    "fact": "MJ Clarke displays remarkable composure at the death during ODI wins, holding opponents to an elite 4.43 economy rate in the final overs."
+  },
+  {
+    "stat_id": "bat_sr_ODI_death_False",
+    "player": "L Wolvaardt",
+    "metric": "strike_rate",
+    "value": 192.7,
+    "fact": "Laura Wolvaardt battles until the final ball, striking at a sensational 192.7 in the death overs even in ODI defeats."
+  },
+  {
+    "stat_id": "bowl_econ_ODI_death_False",
+    "player": "EJ Carson",
+    "metric": "economy_rate",
+    "value": 2.34,
+    "fact": "EJ Carson severely limits late-innings damage, maintaining a near-impossible 2.34 economy rate at the death during ODI losses."
+  },
+  {
+    "stat_id": "bat_sr_T20_powerplay_True",
+    "player": "JL Smith",
+    "metric": "strike_rate",
+    "value": 204.0,
+    "fact": "JL Smith completely dismantles opening attacks during T20 victories, blasting his way to a 204.0 strike rate in the powerplay."
+  },
+  {
+    "stat_id": "bowl_econ_T20_powerplay_True",
+    "player": "R Shimwamana",
+    "metric": "economy_rate",
+    "value": 3.71,
+    "fact": "R Shimwamana ensures total top-order dominance in T20 wins by restricting the powerplay to a suffocating 3.71 economy rate."
+  },
+  {
+    "stat_id": "bat_sr_T20_powerplay_False",
+    "player": "V Sehwag",
+    "metric": "strike_rate",
+    "value": 204.9,
+    "fact": "Virender Sehwag's aggressive blueprint holds true even in T20 defeats, where he punishes the new ball with a 204.9 powerplay strike rate."
+  },
+  {
+    "stat_id": "bowl_econ_T20_powerplay_False",
+    "player": "Ada Bhasin",
+    "metric": "economy_rate",
+    "value": 1.6,
+    "fact": "Ada Bhasin provides a lone bright spot in T20 losses, completely tying down opening batters with a 1.6 powerplay economy rate."
+  },
+  {
+    "stat_id": "bat_sr_T20_middle_True",
+    "player": "JN Loftie-Eaton",
+    "metric": "strike_rate",
+    "value": 249.0,
+    "fact": "JN Loftie-Eaton turns the T20 middle overs into a boundary-hitting masterclass, accelerating to a massive 249.0 strike rate in winning causes."
+  },
+  {
+    "stat_id": "bowl_econ_T20_middle_True",
+    "player": "Rosine Irera",
+    "metric": "economy_rate",
+    "value": 3.53,
+    "fact": "Rosine Irera crushes opposition momentum in the middle of T20 victories, yielding a remarkably stingy 3.53 economy rate."
+  },
+  {
+    "stat_id": "bat_sr_T20_middle_False",
+    "player": "Karanbir Singh",
+    "metric": "strike_rate",
+    "value": 226.7,
+    "fact": "Karanbir Singh refuses to let the run rate drop during T20 defeats, attacking the middle overs at an explosive 226.7 strike rate."
+  },
+  {
+    "stat_id": "bowl_econ_T20_middle_False",
+    "player": "NW Sariani",
+    "metric": "economy_rate",
+    "value": 2.21,
+    "fact": "NW Sariani consistently forces false shots during the T20 middle overs, locking down a 2.21 economy rate despite the team's loss."
+  },
+  {
+    "stat_id": "bat_sr_Test_powerplay_True",
+    "player": "BA Stokes",
+    "metric": "strike_rate",
+    "value": 125.2,
+    "fact": "Ben Stokes brings white-ball aggression to the Test arena, striking at 125.2 against the new ball to set up victories."
+  },
+  {
+    "stat_id": "bowl_econ_Test_powerplay_True",
+    "player": "Mohammad Shahid",
+    "metric": "economy_rate",
+    "value": 1.45,
+    "fact": "Mohammad Shahid locks down the opposition early, maintaining a suffocating economy rate of 1.45 in Test powerplays during winning matches."
+  },
+  {
+    "stat_id": "bat_sr_Test_powerplay_False",
+    "player": "BM Duckett",
+    "metric": "strike_rate",
+    "value": 87.0,
+    "fact": "Ben Duckett maintains his proactive sweeping and driving even in Test defeats, recording an 87.0 strike rate against the new ball."
+  },
+  {
+    "stat_id": "bowl_econ_Test_powerplay_False",
+    "player": "RM Farrell",
+    "metric": "economy_rate",
+    "value": 0.83,
+    "fact": "RM Farrell bowls with absolute precision in Test match defeats, starving opening batters with an incredible 0.83 economy rate."
+  },
+  {
+    "stat_id": "bat_sr_Test_middle_True",
+    "player": "GD Phillips",
+    "metric": "strike_rate",
+    "value": 114.2,
+    "fact": "Glenn Phillips disrupts traditional Test match accumulation, scoring at a rapid 114.2 strike rate through the middle overs of victories."
+  },
+  {
+    "stat_id": "bowl_econ_Test_middle_True",
+    "player": "S Nitschke",
+    "metric": "economy_rate",
+    "value": 1.33,
+    "fact": "S Nitschke grinds down opposition batters in Test victories, exerting total control with a 1.33 economy rate in the middle phase."
+  },
+  {
+    "stat_id": "bat_sr_Test_middle_False",
+    "player": "PWH de Silva",
+    "metric": "strike_rate",
+    "value": 106.7,
+    "fact": "PWH de Silva provides dynamic counter-attacking in Test defeats, elevating the middle-overs scoring rate to 106.7."
+  },
+  {
+    "stat_id": "bowl_econ_Test_middle_False",
+    "player": "E Bisht",
+    "metric": "economy_rate",
+    "value": 0.79,
+    "fact": "Ekta Bisht offers relentless accuracy during Test match losses, bogging down the middle overs with an extraordinary 0.79 economy rate."
+  },
+  {
+    "stat_id": "bat_sr_Test_death_True",
+    "player": "L Ronchi",
+    "metric": "strike_rate",
+    "value": 128.1,
+    "fact": "Luke Ronchi ruthlessly attacks tiring bowling units, capitalizing on the old ball with a 128.1 strike rate late in Test victories."
+  },
+  {
+    "stat_id": "bowl_econ_Test_death_True",
+    "player": "RN Lewis",
+    "metric": "economy_rate",
+    "value": 1.74,
+    "fact": "RN Lewis ensures no easy runs are scored as the innings closes, polishing off Test victories with a 1.74 economy rate against the tail."
+  },
+  {
+    "stat_id": "bat_sr_Test_death_False",
+    "player": "Shahid Afridi",
+    "metric": "strike_rate",
+    "value": 112.6,
+    "fact": "Shahid Afridi brings his trademark chaos to the final stages of Test defeats, swinging freely for a 112.6 strike rate."
+  },
+  {
+    "stat_id": "bowl_econ_Test_death_False",
+    "player": "CD McMillan",
+    "metric": "economy_rate",
+    "value": 1.2,
+    "fact": "CD McMillan wraps up the lower order efficiently even in losing Test efforts, allowing a mere 1.2 runs per over at the death."
+  }
+]

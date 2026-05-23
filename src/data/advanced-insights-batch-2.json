@@ -1,0 +1,464 @@
+[
+  {
+    "card_id": "insight_2",
+    "headline": "Jos Buttler: Elite Acceleration",
+    "player": "JC Buttler",
+    "technique": "advanced_modeling",
+    "text": "Jos Buttler operates at an elite white-ball strike rate of 115.65, cementing his status as one of the premier boundary-hitters in the dataset. He significantly outperforms traditional top-order baselines by combining opening-batter volume with death-over aggression. This is validated across a substantial sample size of 4,710 balls."
+  },
+  {
+    "card_id": "insight_5",
+    "headline": "Andre Russell: Pure Power",
+    "player": "AD Russell",
+    "technique": "advanced_modeling",
+    "text": "Andre Russell redefines late-innings finishing with an exceptional strike rate of 130.56. He completely bypasses the standard middle-order accumulation phase, operating almost exclusively as a boundary-clearing anomaly. This insight is drawn from a highly specialized, high-impact sample of 792 deliveries."
+  },
+  {
+    "card_id": "insight_6",
+    "headline": "Heinrich Klaasen: Middle-Order Dominance",
+    "player": "H Klaasen",
+    "technique": "advanced_modeling",
+    "text": "Heinrich Klaasen disrupts spin and pace equally, maintaining a highly aggressive strike rate of 116.74. He ranks in the absolute top tier of middle-order accelerators, rarely allowing opposition bowlers to settle into a rhythm. This profile is backed by a robust sample of 1,810 legal deliveries."
+  },
+  {
+    "card_id": "insight_7",
+    "headline": "Virender Sehwag: The Original Disruptor",
+    "player": "V Sehwag",
+    "technique": "advanced_modeling",
+    "text": "Virender Sehwag set the historical precedent for aggressive opening with a career strike rate of 106.52. Operating in an era before standard T20 acceleration, he outpaced his global peers by an unprecedented margin. This historical dominance is captured across a massive 5,367-ball sample."
+  },
+  {
+    "card_id": "insight_10",
+    "headline": "Sabbir Rahman: Intent & Execution",
+    "player": "Sabbir Rahman",
+    "technique": "advanced_modeling",
+    "text": "Sabbir Rahman brought necessary aggression to the Bangladeshi lineup with a strike rate of 93.25. He consistently operated with higher positive intent than the standard domestic baseline for middle-order batters. This evaluation relies on a qualified sample of 1,349 deliveries faced."
+  },
+  {
+    "card_id": "insight_15",
+    "headline": "Hardik Pandya: Finishing Reliability",
+    "player": "HH Pandya",
+    "technique": "advanced_modeling",
+    "text": "Hardik Pandya consistently delivers late-innings surges, holding a highly effective strike rate of 111.33. He perfectly fits the 'Finisher' archetype, providing crucial acceleration during the death overs against both pace and spin. This data is extracted from a focused sample of 1,703 balls."
+  },
+  {
+    "card_id": "insight_23",
+    "headline": "Quinton de Kock: Powerplay Maximization",
+    "player": "Q de Kock",
+    "technique": "advanced_modeling",
+    "text": "Quinton de Kock ensures early momentum with a consistently high strike rate of 96.75. He excels at exploiting fielding restrictions, acting as the primary aggressor in opening partnerships. This metric is rigorously supported by an expansive 7,227-ball dataset."
+  },
+  {
+    "card_id": "insight_24",
+    "headline": "Phil Salt: Ultra-Aggressive Starts",
+    "player": "PD Salt",
+    "technique": "advanced_modeling",
+    "text": "Phil Salt embodies the modern ultra-aggressive opening philosophy with a staggering strike rate of 114.99. He completely discards traditional ball-sighting phases, attacking from the first delivery to put immediate pressure on opening bowlers. This high-variance approach is tracked across an 847-ball sample."
+  },
+  {
+    "card_id": "insight_25",
+    "headline": "David Warner: Sustained Excellence",
+    "player": "DA Warner",
+    "technique": "advanced_modeling",
+    "text": "David Warner balances relentless aggression with high-volume run-scoring, achieving a strike rate of 96.81. He represents the gold standard for all-format openers, maintaining boundary pressure without sacrificing his wicket cheaply. This conclusion is verified by a massive, multi-format sample of 6,803 deliveries."
+  },
+  {
+    "card_id": "insight_26",
+    "headline": "Liton Das: Technical Fluidity",
+    "player": "Liton Das",
+    "technique": "advanced_modeling",
+    "text": "Liton Das anchors and accelerates for Bangladesh with a fluid strike rate of 85.34. He bridges the gap between traditional technique and modern limited-overs requirements, frequently taking on the role of the primary stroke-maker. This is calculated from a comprehensive sample of 2,796 balls."
+  },
+  {
+    "card_id": "insight_28",
+    "headline": "Rohit Sharma: Calculated Acceleration",
+    "player": "RG Sharma",
+    "technique": "advanced_modeling",
+    "text": "Rohit Sharma dictates the pace of the innings, culminating in a career strike rate of 92.25. His unique profile features deliberate early-innings pacing followed by unmatched acceleration in the latter half of his knock. This extraordinary consistency is proven across 12,274 legal deliveries."
+  },
+  {
+    "card_id": "insight_001",
+    "headline": "Shahid Afridi: The Outlier Profile",
+    "player": "Shahid Afridi",
+    "technique": "advanced_modeling",
+    "text": "Shahid Afridi operates at a hyper-aggressive career strike rate of 136.05, establishing an early historical benchmark for middle-order disruption. He significantly outpaces the traditional limited-overs baseline, sacrificing wicket preservation for sheer boundary volume. This profile is validated by a massive historical sample of 2,863 deliveries."
+  },
+  {
+    "card_id": "insight_002",
+    "headline": "Odean Smith: Extreme Lower-Order Intent",
+    "player": "OF Smith",
+    "technique": "advanced_modeling",
+    "text": "Odean Smith stretches the limits of lower-order hitting with an extreme overall strike rate of 165.25. He bypasses the accumulation phase entirely, functioning as a pure ball-striker designed to maximize the final overs. This metric highlights his highly specific archetype against the standard all-rounder baseline."
+  },
+  {
+    "card_id": "insight_003",
+    "headline": "Dewald Brevis: Next-Generation Power",
+    "player": "D Brevis",
+    "technique": "advanced_modeling",
+    "text": "Dewald Brevis represents the next evolution of top-order aggression, boasting a phenomenal early-career strike rate of 143.40. He drastically outperforms standard youth baselines, immediately translating raw power into high-level run production. This high-variance profile indicates a ceiling far above the current peer group."
+  },
+  {
+    "card_id": "insight_004",
+    "headline": "Nonkululeko Mlaba: Elite Action Value",
+    "player": "N Mlaba",
+    "technique": "vaep_analysis",
+    "text": "Nonkululeko Mlaba generates a highly impactful +0.055 action value per ball, ranking first among her peers. She consistently alters the win probability in her team's favor far more effectively than the average bowler. This efficiency is tracked across a strict qualification gate of 200 deliveries."
+  },
+  {
+    "card_id": "insight_005",
+    "headline": "Rachael Haynes: Wicket Threat Generation",
+    "player": "RL Haynes",
+    "technique": "vaep_analysis",
+    "text": "Rachael Haynes maintains a premier rank in wicket threat generation, fundamentally disrupting opposition stability. She maximizes the probability of breakthroughs per delivery significantly better than the standard bowling baseline. This underlying value is proven across a minimum threshold of 200 balls."
+  },
+  {
+    "card_id": "insight_csv_008",
+    "headline": "Quinton de Kock: Elite Death Overs Striking",
+    "player": "Q de Kock",
+    "technique": "league_rank",
+    "text": "Quinton de Kock operates at a devastating strike rate of 216.3 during the death overs of ODI matches. He ranks first among all qualified batters in this phase, transforming late-innings accumulation into pure boundary dominance. This metric is validated by a focused sample of 104 deliveries faced at the death."
+  },
+  {
+    "card_id": "insight_csv_005",
+    "headline": "Brendon McCullum: Late-Innings Acceleration",
+    "player": "BB McCullum",
+    "technique": "league_rank",
+    "text": "Brendon McCullum accelerates flawlessly at the end of T20 innings, boasting an elite death-overs strike rate of 221.0. Ranking third overall in this specific context, he perfectly executes the finisher archetype by maximizing every remaining delivery. This aggressive profile is supported by a 138-ball sample size."
+  },
+  {
+    "card_id": "insight_csv_006",
+    "headline": "Dewald Brevis: Middle-Overs Disruption",
+    "player": "D Brevis",
+    "technique": "league_rank",
+    "text": "Dewald Brevis disrupts standard middle-order pacing with an extraordinary ODI strike rate of 138.1 during the middle overs. He leads all qualified players in this phase, proving an ability to hit through the field when traditional batters usually rotate the strike. This calculation is grounded in a 118-ball sample."
+  },
+  {
+    "card_id": "insight_csv_014",
+    "headline": "Shahid Afridi: Powerplay Exploitation",
+    "player": "Shahid Afridi",
+    "technique": "league_rank",
+    "text": "Shahid Afridi exploits fielding restrictions with a blistering strike rate of 124.0 in ODI powerplays. Ranking fourth overall, his historical capacity to generate immediate top-order momentum remains largely unmatched by traditional openers. This sustained dominance is verified across a massive 358-ball powerplay sample."
+  },
+  {
+    "card_id": "insight_csv_031",
+    "headline": "MS Dhoni: Extreme Win Probability Value",
+    "player": "MS Dhoni",
+    "technique": "wp_swing",
+    "text": "MS Dhoni's dismissal in the 20th over against the West Indies in 2016 triggered a catastrophic 92% drop in India's win probability. This extreme 92-percentage-point swing illustrates his unparalleled singular value as a death-overs closer in tight T20 scenarios. The analysis isolates this single, match-defining delivery to quantify his true baseline importance."
+  },
+  {
+    "card_id": "insight_csv_013",
+    "headline": "SK Patel: High-Pressure Surges",
+    "player": "SK Patel",
+    "technique": "player_vs_self",
+    "text": "SK Patel uniquely elevates his game when the batting order collapses, seeing his strike rate rise to 156.9 when three or more wickets are down. This represents a 101.8% massive increase over his baseline strike rate of 77.7, identifying him as a prime counter-attacker under pressure. This behavioral shift is tracked across a 58-ball high-leverage sample."
+  },
+  {
+    "card_id": "insight_csv_001",
+    "headline": "PL Harris: Middle-Overs Containment",
+    "player": "PL Harris",
+    "technique": "league_rank",
+    "text": "PL Harris provides exceptional control during the accumulation phase, restricting scoring to a mere 2.6 economy rate in ODI middle overs. Securing a top-ten rank in this specific match state, he efficiently shuts down opposition momentum when strike rotation is typically expected. This evaluation is grounded in a rigorous 300-ball sample size."
+  },
+  {
+    "card_id": "insight_csv_002",
+    "headline": "S Dharnidharka: Powerplay Suffocation",
+    "player": "S Dharnidharka",
+    "technique": "league_rank",
+    "text": "S Dharnidharka immediately neutralizes top-order aggression by maintaining a 2.5 economy rate during ODI powerplays. Ranking tenth among all qualified peers, she effectively removes the boundary-scoring options that modern opening batters rely upon. This statistical reality is backed by a 216-ball powerplay dataset."
+  },
+  {
+    "card_id": "insight_csv_003",
+    "headline": "JL Smith: Early-Innings Disruption",
+    "player": "JL Smith",
+    "technique": "league_rank",
+    "text": "JL Smith completely dominates fielding restrictions with an elite ODI powerplay strike rate of 130.0. Holding the number one overall rank in this context, he heavily outperforms standard opening baselines to generate immediate scoreboard pressure. This insight relies on a verified 150-ball dataset."
+  },
+  {
+    "card_id": "insight_csv_004",
+    "headline": "Anshuman Rath: Anchor Efficiency",
+    "player": "Anshuman Rath",
+    "technique": "league_rank",
+    "text": "Anshuman Rath dictates the pace of the middle overs by allowing a restrictive economy rate of 2.48. He secures the eighth rank globally for this phase, forcing batters to take elevated risks against him to accelerate the run rate. This control metric is derived from a 246-ball sample."
+  },
+  {
+    "card_id": "insight_csv_007",
+    "headline": "Mehboob Ali: Unprecedented T20 Acceleration",
+    "player": "Mehboob Ali",
+    "technique": "league_rank",
+    "text": "Mehboob Ali executes a hyper-aggressive powerplay strategy, recording a staggering 214.0 strike rate in the first six overs of T20 matches. This ranks first among all qualified batters, highlighting a high-variance profile built entirely on boundary maximization. The evaluation draws from an intense 114-ball sample."
+  },
+  {
+    "card_id": "insight_csv_009",
+    "headline": "Dewald Brevis: Chasing Velocity",
+    "player": "D Brevis",
+    "technique": "league_rank",
+    "text": "Dewald Brevis thrives under the pressure of a target, operating at a 145.6 strike rate during ODI chases. Ranking first among all qualified batters in this match state, he maintains elite scoring velocity without allowing the required run rate to escalate. This data is extracted from a focused sample of 103 deliveries."
+  },
+  {
+    "card_id": "insight_csv_010",
+    "headline": "Wasim Akram: Elite Middle-Overs Economy",
+    "player": "Wasim Akram",
+    "technique": "league_rank",
+    "text": "Wasim Akram translated his new-ball threat into middle-overs suffocation, yielding an economy rate of just 2.45 during the accumulation phase. Ranking seventh historically in this context, his sheer presence prevented batters from comfortably rotating the strike. This evaluation is supported by a 186-ball sample."
+  },
+  {
+    "card_id": "insight_csv_011",
+    "headline": "JM Davison: Historical Powerplay Dominance",
+    "player": "JM Davison",
+    "technique": "league_rank",
+    "text": "JM Davison established an early standard for top-order boundary hitting with a 124.5 strike rate in ODI powerplays. Earning the third rank overall, his statistical profile closely resembles modern T20 pacing applied to a traditional format. This sustained aggression is tracked across a massive 433-ball sample."
+  },
+  {
+    "card_id": "insight_csv_012",
+    "headline": "AM Peterson: Powerplay Control",
+    "player": "AM Peterson",
+    "technique": "league_rank",
+    "text": "AM Peterson limits early damage by holding batters to a highly efficient 2.28 economy rate during ODI powerplays. Ranking ninth overall, he effectively executes a containment strategy when fielding restrictions are designed to favor the batter. This baseline is established over a 150-ball qualification gate."
+  },
+  {
+    "card_id": "insight_csv_015",
+    "headline": "Musaddiq Ahmed: T20 Powerplay Surges",
+    "player": "Musaddiq Ahmed",
+    "technique": "league_rank",
+    "text": "Musaddiq Ahmed attacks the new ball relentlessly, carrying a 203.9 strike rate through T20 powerplays. Securing the second overall rank globally, he systematically dismantles opening bowlers before the field spreads. This high-impact profile is validated across 203 deliveries."
+  },
+  {
+    "card_id": "insight_csv_016",
+    "headline": "Shahid Afridi: High-Octane Pursuits",
+    "player": "Shahid Afridi",
+    "technique": "league_rank",
+    "text": "Shahid Afridi discarded traditional pacing during second-innings run chases, maintaining a 132.8 strike rate when pursuing ODI targets. This ranks him fourth among all qualified batters, demonstrating a singular reliance on boundary volume to close out games. The metric is drawn from a monumental 1,402-ball historical sample."
+  },
+  {
+    "card_id": "insight_csv_017",
+    "headline": "Maaz Sadaqat: Immediate Top-Order Pressure",
+    "player": "Maaz Sadaqat",
+    "technique": "league_rank",
+    "text": "Maaz Sadaqat forces opening bowlers into defensive lengths, scoring at a 126.2 strike rate during the ODI powerplay. Ranking second overall, his approach bypasses the typical ball-sighting phase in favor of immediate momentum generation. This analysis utilizes a 122-ball powerplay dataset."
+  },
+  {
+    "card_id": "insight_csv_018",
+    "headline": "RJ Nicol: Counter-Attacking Mechanism",
+    "player": "RJ Nicol",
+    "technique": "player_vs_self",
+    "text": "RJ Nicol aggressively counters batting collapses, elevating his strike rate to 158.8 when three or more wickets have fallen. This marks a 98.2% increase over his standard baseline of 80.1, identifying a highly specific mechanism for reversing opposition momentum. The behavioral shift is quantified within a 51-ball high-leverage sample."
+  },
+  {
+    "card_id": "insight_csv_019",
+    "headline": "RJ Peterson: Early Restricted Scoring",
+    "player": "RJ Peterson",
+    "technique": "league_rank",
+    "text": "RJ Peterson restricts scoring opportunities from the outset, yielding a 2.18 economy rate during ODI powerplays. Ranking seventh among all qualifiers, his trajectory effectively shuts down aggressive opening partnerships before they can stabilize. This control is evaluated over 132 deliveries."
+  },
+  {
+    "card_id": "insight_csv_020",
+    "headline": "D Ganga: Crisis Acceleration",
+    "player": "D Ganga",
+    "technique": "player_vs_self",
+    "text": "D Ganga actively shifts into a higher gear during early collapses, raising his strike rate to 73.5 when entering the crease with three or more wickets down. This 77.4% surge above his slow 41.4 baseline indicates a deliberate tactical pivot rather than natural variance. The recovery profile is tracked across 151 deliveries."
+  },
+  {
+    "card_id": "insight_csv_021",
+    "headline": "Sharjeel Khan: Middle-Overs Aggression",
+    "player": "Sharjeel Khan",
+    "technique": "league_rank",
+    "text": "Sharjeel Khan refuses to let the run rate stagnate, driving the ball at a 131.1 strike rate during ODI middle overs. He ranks second globally in this phase, converting traditional strike-rotation overs into high-yield boundary opportunities. This evaluation relies on a 228-ball dataset."
+  },
+  {
+    "card_id": "insight_csv_022",
+    "headline": "Iram Javed: Match-Defining Wicket",
+    "player": "Iram Javed",
+    "technique": "wp_swing",
+    "text": "The dismissal of Iram Javed in the 24th over against the West Indies in 2017 triggered a catastrophic 99% drop in Pakistan's win probability. This total collapse in match leverage perfectly illustrates her absolute structural necessity to the lineup. The isolation of this single event quantifies the exact moment the run chase became mathematically impossible."
+  },
+  {
+    "card_id": "insight_csv_023",
+    "headline": "GM Hamilton: Critical Win-Probability Anchor",
+    "player": "GM Hamilton",
+    "technique": "wp_swing",
+    "text": "GM Hamilton's departure in the 9th over against Kenya in 2008 resulted in a devastating 98-percentage-point swing in win probability. His wicket alone transformed a near-guaranteed Scottish victory into a total structural failure. This metric assigns extreme singular value to his presence at the crease during that fixture."
+  },
+  {
+    "card_id": "insight_csv_024",
+    "headline": "NND de Silva: Early Collapse Catalyst",
+    "player": "NND de Silva",
+    "technique": "wp_swing",
+    "text": "The early dismissal of NND de Silva in the 6th over against England in 2023 caused a massive 98% collapse in Sri Lanka's win probability. Losing her wicket during the powerplay entirely derailed the mathematical viability of the innings. This stark percentage swing isolates the exact delivery that decided the match outcome."
+  },
+  {
+    "card_id": "insight_csv_025",
+    "headline": "Naeem Gull: Structural Dependency",
+    "player": "Naeem Gull",
+    "technique": "wp_swing",
+    "text": "Naeem Gull's wicket in the 5th over against Sierra Leone in 2022 generated a severe 97-percentage-point swing in win probability. The data indicates that Eswatini's entire match strategy was uniquely dependent on his survival through the powerplay. This single event shifted the match from a 97% winning position to an inevitable loss."
+  },
+  {
+    "card_id": "insight_csv_026",
+    "headline": "LJ Wright: High-Leverage Dismissal",
+    "player": "LJ Wright",
+    "technique": "wp_swing",
+    "text": "The loss of LJ Wright in the 5th over against South Africa in 2012 triggered a dramatic 97% downward swing in England's win probability. His departure removed the primary mathematical path to victory, collapsing the underlying run chase architecture. This advanced metric perfectly captures his isolated value in high-leverage T20 environments."
+  },
+  {
+    "card_id": "insight_csv_027",
+    "headline": "GK Diviya: Powerplay Vulnerability",
+    "player": "GK Diviya",
+    "technique": "wp_swing",
+    "text": "GK Diviya's dismissal in the 5th over against Indonesia in 2025 collapsed Singapore's win probability from 95% straight to zero. Her wicket removed all realistic boundary-hitting equity from the remainder of the lineup. The severity of this 95-percentage-point swing highlights a massive structural reliance on her top-order production."
+  },
+  {
+    "card_id": "insight_csv_028",
+    "headline": "KA Pollard: The Late-Innings Linchpin",
+    "player": "KA Pollard",
+    "technique": "wp_swing",
+    "text": "Kieron Pollard's wicket in the 27th over against South Africa in 2013 caused a 94-percentage-point crash in the West Indies' win probability. As the designated closer, his exit mathematically eliminated the team's ability to maintain the required run rate. This swing perfectly quantifies the immense pressure placed on his specific archetype."
+  },
+  {
+    "card_id": "insight_csv_029",
+    "headline": "Tenjin Rabgey: Pressure-Induced Scoring",
+    "player": "Tenjin Rabgey",
+    "technique": "player_vs_self",
+    "text": "Tenjin Rabgey embraces high-pressure scenarios, accelerating to a 163.0 strike rate when entering the crease with three or more wickets down. This marks an 85.6% jump over his baseline strike rate of 87.8, proving an elite ability to counter-attack during a batting collapse. The statistical surge is verified across 54 critical deliveries."
+  },
+  {
+    "card_id": "insight_csv_030",
+    "headline": "WF Stelling: Powerplay Efficiency",
+    "player": "WF Stelling",
+    "technique": "league_rank",
+    "text": "WF Stelling restricts early momentum flawlessly, maintaining a 2.04 economy rate in ODI powerplays. Ranking fourth globally, his disciplined lengths prevent opening batters from exploiting the fielding restrictions. This baseline is established over a strict 150-ball minimum qualification."
+  },
+  {
+    "card_id": "insight_csv_032",
+    "headline": "MJ Clarke: Chasing Anchor Collapse",
+    "player": "MJ Clarke",
+    "technique": "wp_swing",
+    "text": "Michael Clarke's dismissal in the 20th over against New Zealand in 2010 resulted in a sudden 92% drop in win probability. His ability to manipulate the field was holding the entire mathematical pursuit together until that exact delivery. This severe swing underscores his role as the ultimate stabilizing force in a tight chase."
+  },
+  {
+    "card_id": "insight_csv_033",
+    "headline": "A Sharma: Opening Control",
+    "player": "A Sharma",
+    "technique": "league_rank",
+    "text": "A Sharma effectively shuts down aggressive starts, yielding a highly restrictive 2.04 economy rate in ODI powerplays. Earning the fifth rank globally, she forces opposition batters into unforced errors by starving them of early boundaries. The evaluation relies on a 138-ball powerplay sample."
+  },
+  {
+    "card_id": "insight_csv_034",
+    "headline": "RD Gaikwad: Hyper-Aggressive Recovery",
+    "player": "RD Gaikwad",
+    "technique": "player_vs_self",
+    "text": "RD Gaikwad orchestrates extreme counter-attacks, surging to a 225.4 strike rate when his team has lost three early wickets. This massive 80.6% elevation above his 124.8 baseline suggests he intentionally discards preservation in favor of disrupting the bowler's rhythm. This unique behavioral shift is captured across 67 deliveries."
+  },
+  {
+    "card_id": "insight_csv_035",
+    "headline": "CT Bancroft: Tactical Acceleration",
+    "player": "CT Bancroft",
+    "technique": "player_vs_self",
+    "text": "CT Bancroft alters his traditional pacing during top-order failures, raising his strike rate to 77.3 when three wickets are down. This 80.4% increase over a highly conservative 42.8 baseline indicates a deliberate shift toward strike rotation to ease pressure. The recovery strategy is evaluated across a 66-ball sample."
+  },
+  {
+    "card_id": "insight_csv_036",
+    "headline": "F Malefula: Critical Match Leverage",
+    "player": "F Malefula",
+    "technique": "wp_swing",
+    "text": "F Malefula's wicket in the 9th over against Tanzania in 2025 triggered a fatal 91% collapse in Malawi's win probability. The data clearly shows the remainder of the lineup lacked the necessary boundary equity to compensate for his departure. This isolated delivery single-handedly dictated the final result."
+  },
+  {
+    "card_id": "insight_csv_037",
+    "headline": "AJ Strauss: Foundation Collapse",
+    "player": "AJ Strauss",
+    "technique": "wp_swing",
+    "text": "The early dismissal of Andrew Strauss in the 6th over against Australia in 2005 caused a massive 91-percentage-point swing in win probability. Losing his wicket inside the powerplay mathematically unraveled England's structured run chase before it could begin. This specific metric quantifies the extreme value of his top-order stability."
+  },
+  {
+    "card_id": "insight_csv_038",
+    "headline": "H Kaur: The Ultimate Closer",
+    "player": "H Kaur",
+    "technique": "wp_swing",
+    "text": "Harmanpreet Kaur's dismissal in the final over against South Africa in 2024 erased a 90% win probability in a single ball. As the primary boundary-hitter, her exit mathematically ensured that the remaining runs could not be chased. This advanced leverage stat perfectly captures the immense burden placed on her finishing ability."
+  },
+  {
+    "card_id": "insight_csv_039",
+    "headline": "HK Matthews: Early Momentum Shift",
+    "player": "HK Matthews",
+    "technique": "wp_swing",
+    "text": "The wicket of Hayley Matthews just three overs into a 2021 match against South Africa triggered an 88% crash in win probability. Her early departure instantly removed the most potent boundary-scoring threat from the West Indies lineup. This 88-percentage-point shift illustrates her singular capability to alter game states in the powerplay."
+  },
+  {
+    "card_id": "insight_csv_040",
+    "headline": "MT Renshaw: Elevated Scoring Intent",
+    "player": "MT Renshaw",
+    "technique": "player_vs_self",
+    "text": "MT Renshaw actively increases his scoring intent during batting collapses, shifting his strike rate up to 83.1 when three or more wickets are down. This represents a 56.2% increase over his highly defensive 53.2 baseline, prioritizing proactive run-scoring over pure survival. The robust tactical change is backed by a massive 610-ball sample."
+  },
+  {
+    "card_id": "insight_csv_041",
+    "headline": "Sulaiman Ali: Innings Derailment",
+    "player": "Sulaiman Ali",
+    "technique": "wp_swing",
+    "text": "Sulaiman Ali's wicket in the 9th over against Luxembourg in 2022 generated a sudden 87% drop in win probability for Bulgaria. The severity of this swing indicates the underlying chase metrics were entirely built around his projected run output. This isolated data point confirms his status as the primary engine of the innings."
+  },
+  {
+    "card_id": "insight_csv_042",
+    "headline": "FA Allen: Relentless Chasing Velocity",
+    "player": "FA Allen",
+    "technique": "league_rank",
+    "text": "FA Allen dictates extreme pressure during second innings pursuits, maintaining a 134.8 strike rate while chasing ODI targets. Earning the second overall rank globally, he forces opposition captains to constantly adjust field placements during critical overs. This aggressive approach is tracked across 141 high-leverage deliveries."
+  },
+  {
+    "card_id": "insight_csv_043",
+    "headline": "KL Rolton: Counter-Attack Response",
+    "player": "KL Rolton",
+    "technique": "player_vs_self",
+    "text": "KL Rolton rapidly accelerates the run rate when entering after a top-order failure, scoring at an 84.7 strike rate when three wickets are down. This 78.3% leap over her traditional 47.5 baseline demonstrates a calculated decision to transfer pressure back onto the bowling attack. The adjustment is measured within a 59-ball sample."
+  },
+  {
+    "card_id": "insight_csv_044",
+    "headline": "T Mupariwa: Late-Innings Anchor Loss",
+    "player": "T Mupariwa",
+    "technique": "wp_swing",
+    "text": "Tawanda Mupariwa's dismissal in the 28th over against Sri Lanka in 2008 triggered an 86-percentage-point collapse in win probability. His survival was mathematically central to extending the innings and maintaining a viable run rate deep into the match. This specific swing perfectly captures the fragility of the lower-middle order."
+  },
+  {
+    "card_id": "insight_csv_045",
+    "headline": "P Alako: Death Overs Dependency",
+    "player": "P Alako",
+    "technique": "wp_swing",
+    "text": "The dismissal of P Alako in the 20th over against Tanzania in 2025 resulted in an immediate 86% plunge in Uganda's win probability. The data confirms the lineup had no remaining personnel capable of executing the required death-overs boundary hitting. This single delivery definitively closed the mathematical window for victory."
+  },
+  {
+    "card_id": "insight_csv_046",
+    "headline": "JDP Oram: Final Over Leverage",
+    "player": "JDP Oram",
+    "technique": "wp_swing",
+    "text": "Jacob Oram's wicket in the final over against South Africa in 2009 caused an 86% negative swing in New Zealand's win probability. As a specialist finisher, his presence at the crease represented the entirety of the team's remaining winning equity. This advanced metric isolates the precise ball that neutralized the run chase."
+  },
+  {
+    "card_id": "insight_csv_047",
+    "headline": "Ayesha Zafar: Elite Pressure Reversal",
+    "player": "Ayesha Zafar",
+    "technique": "player_vs_self",
+    "text": "Ayesha Zafar actively dictates terms during batting collapses, surging to a 123.7 strike rate when her team loses three early wickets. This marks an explosive 64% increase over her 75.4 baseline, identifying her as a premier counter-attacking asset rather than a traditional accumulator. This specific profile is validated across 186 high-stress deliveries."
+  },
+  {
+    "card_id": "insight_csv_048",
+    "headline": "C Agafili: Instant Win-Probability Drop",
+    "player": "C Agafili",
+    "technique": "wp_swing",
+    "text": "The extreme early loss of C Agafili in the 2nd over against Vanuatu in 2025 derailed Samoa's win probability by 86 percentage points. Losing a primary contributor before the field spread mathematically devastated the projected run rate curve. This swing showcases the severe penalty of powerplay wickets on heavy-reliant teams."
+  },
+  {
+    "card_id": "insight_csv_049",
+    "headline": "H Kaur: Match-Deciding Departure",
+    "player": "H Kaur",
+    "technique": "wp_swing",
+    "text": "Harmanpreet Kaur's wicket in the 20th over against England in 2025 generated an immediate 85% drop in win probability. Her dismissal stripped the lineup of its last viable power-hitter just as maximum acceleration was required. This severe percentage swing quantifies her absolute necessity in high-stakes run chases."
+  },
+  {
+    "card_id": "insight_csv_050",
+    "headline": "K Waiswa: Middle-Overs Structural Break",
+    "player": "K Waiswa",
+    "technique": "wp_swing",
+    "text": "The dismissal of K Waiswa in the 13th over against Namibia in 2021 resulted in an 85-percentage-point crash in win probability. His departure completely disrupted the middle-overs transition phase, exposing a long tail earlier than anticipated. This exact delivery marked the moment the structural integrity of the innings failed."
+  }
+]
