@@ -1,38 +1,53 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 type MagicCardProps = {
   children: React.ReactNode;
   className?: string;
   gradientColor?: string;
+  ariaLabelledBy?: string;
 };
 
 export function MagicCard({
   children,
   className,
-  gradientColor = "rgba(255,255,255,0.06)",
+  gradientColor = "rgba(0, 106, 78, 0.08)",
+  ariaLabelledBy,
 }: MagicCardProps) {
-  const [pos, setPos] = useState({ x: 50, y: 50 });
+  const cardRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = cardRef.current;
+    if (!el) return;
+
+    const onMove = (event: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      el.style.setProperty("--mx", `${x}%`);
+      el.style.setProperty("--my", `${y}%`);
+    };
+
+    el.addEventListener("mousemove", onMove);
+    return () => el.removeEventListener("mousemove", onMove);
+  }, []);
 
   return (
     <article
+      ref={cardRef}
+      aria-labelledby={ariaLabelledBy}
       className={cn(
-        "relative overflow-hidden border border-white/10 bg-white/5 p-5 backdrop-blur-md",
+        "group relative overflow-hidden border border-[var(--border-subtle)] bg-[var(--surface-1)] p-5 transition-colors duration-200 hover:bg-[var(--surface-2)] hover:border-l-2 hover:border-l-[var(--accent)]",
         className,
       )}
-      onMouseMove={(event) => {
-        const rect = event.currentTarget.getBoundingClientRect();
-        const x = ((event.clientX - rect.left) / rect.width) * 100;
-        const y = ((event.clientY - rect.top) / rect.height) * 100;
-        setPos({ x, y });
-      }}
     >
       <div
-        className="pointer-events-none absolute inset-0 transition-opacity duration-300"
+        className="pointer-events-none absolute inset-0"
         style={{
-          background: `radial-gradient(circle at ${pos.x}% ${pos.y}%, ${gradientColor} 0%, rgba(0,0,0,0) 45%)`,
+          background:
+            `radial-gradient(circle at var(--mx, 50%) var(--my, 50%), ${gradientColor} 0%, rgba(0,0,0,0) 30%)`,
         }}
       />
       <div className="relative">{children}</div>

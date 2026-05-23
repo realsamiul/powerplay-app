@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-const BLOCKS = 72;
+const BLOCKS = 48;
 
 export function PixelPageTransition() {
   const pathname = usePathname();
@@ -14,11 +14,11 @@ export function PixelPageTransition() {
 
   useEffect(() => {
     if (reduceMotion) return;
-    if (previousPath.current === pathname) return;
+    if (previousPath.current.split("#")[0] === pathname.split("#")[0]) return;
 
     previousPath.current = pathname;
     const start = window.setTimeout(() => setTransitionKey(pathname), 0);
-    const stop = window.setTimeout(() => setTransitionKey(null), 900);
+    const stop = window.setTimeout(() => setTransitionKey(null), 550);
 
     return () => {
       window.clearTimeout(start);
@@ -33,7 +33,7 @@ export function PixelPageTransition() {
       {transitionKey ? (
         <motion.div
           key={transitionKey}
-          className="pointer-events-none fixed inset-0 z-[60] bg-black/55"
+          className="pointer-events-none fixed inset-0 z-[60] bg-[rgba(8,8,5,0.68)]"
           initial="hidden"
           animate="exit"
           exit="done"
@@ -43,24 +43,24 @@ export function PixelPageTransition() {
               opacity: 1,
               transition: {
                 delayChildren: 0.04,
-                staggerChildren: 0.01,
+                staggerChildren: 0.008,
                 staggerDirection: -1,
               },
             },
             done: { opacity: 0, transition: { duration: 0.35 } },
           }}
         >
-          <div className="grid h-full grid-cols-12 gap-[1px]">
+          <div className="grid h-full grid-cols-8 gap-[1px]">
             {Array.from({ length: BLOCKS }).map((_, i) => (
               <motion.div
                 key={i}
-                className="bg-zinc-100/85"
+                className="bg-[var(--accent)]"
                 variants={{
                   hidden: { opacity: 0, scale: 0.2 },
                   exit: {
-                    opacity: [0, 1, 0],
-                    scale: [0.2, 1, 0.6],
-                    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+                    opacity: 1,
+                    scale: [0.2, 1],
+                    transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
                   },
                 }}
               />

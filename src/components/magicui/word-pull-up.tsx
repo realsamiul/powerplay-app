@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useEffect } from "react";
 
 type Props = {
   words: string;
@@ -8,23 +9,35 @@ type Props = {
 };
 
 export function WordPullUp({ words, className }: Props) {
-  const tokens = words.split(" ");
+  const groups = words.match(/.{1,3}/g) ?? [words];
   const reduceMotion = useReducedMotion();
 
+  useEffect(() => {
+    if (reduceMotion) {
+      window.dispatchEvent(new CustomEvent("headlineComplete"));
+      return;
+    }
+    const id = window.setTimeout(
+      () => window.dispatchEvent(new CustomEvent("headlineComplete")),
+      Math.max(300, groups.length * 35 + 560),
+    );
+    return () => window.clearTimeout(id);
+  }, [groups.length, reduceMotion]);
+
   return (
-    <h1 className={className}>
-      {tokens.map((token, index) => (
-        <span key={`${token}-${index}`} className="inline-block overflow-hidden pr-[0.25em]">
+    <h1 className={className} aria-label={words} style={{ letterSpacing: "var(--tracking-display)" }}>
+      {groups.map((chunk, index) => (
+        <span key={`${chunk}-${index}`} className="inline-block overflow-hidden" aria-hidden="true">
           {reduceMotion ? (
-            <span className="inline-block">{token}</span>
+            <span className="inline-block">{chunk}</span>
           ) : (
             <motion.span
-              initial={{ y: "120%", opacity: 0 }}
+              initial={{ y: "105%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.65, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.55, delay: index * 0.02, ease: [0.22, 1, 0.36, 1] }}
               className="inline-block"
             >
-              {token}
+              {chunk}
             </motion.span>
           )}
         </span>

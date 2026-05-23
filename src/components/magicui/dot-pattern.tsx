@@ -2,14 +2,22 @@ import { cn } from "@/lib/utils";
 
 export function DotPattern({ className }: { className?: string }) {
   return (
-    <div
+    <svg
+      aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute inset-0 opacity-40",
-        "[background-image:radial-gradient(rgba(255,255,255,0.55)_0.6px,transparent_0.6px)]",
-        "[background-size:14px_14px]",
+        "pointer-events-none absolute inset-0 z-0 h-full w-full opacity-70",
         "[mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]",
         className,
       )}
-    />
+      preserveAspectRatio="none"
+      viewBox="0 0 100 100"
+    >
+      <defs>
+        <pattern id="dot-grid" width="2" height="2" patternUnits="userSpaceOnUse">
+          <circle cx="1" cy="1" r="0.16" fill="rgba(0,168,120,0.25)" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#dot-grid)" />
+    </svg>
   );
 }

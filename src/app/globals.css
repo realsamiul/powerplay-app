@@ -1,68 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #060606;
-  --foreground: #f5f5f5;
-  --muted: #a1a1aa;
-  --surface: #101010;
-  --surface-elevated: #171717;
-  --border: rgba(255, 255, 255, 0.1);
+  --bg: #080805;
+  --fg: #f0ece4;
+  --fg-muted: #7a7268;
+  --fg-faint: #3a3830;
+  --accent: #006a4e;
+  --accent-bright: #00a878;
+  --accent-dim: rgba(0, 106, 78, 0.15);
+  --surface-0: #080805;
+  --surface-1: #111109;
+  --surface-2: #1a1a16;
+  --surface-hover: #222218;
+  --border-subtle: rgba(240, 236, 228, 0.06);
+  --border-visible: rgba(240, 236, 228, 0.12);
+  --border-accent: rgba(0, 106, 78, 0.4);
+  --tracking-display: -0.02em;
+  --tracking-heading: -0.01em;
+  --tracking-body: 0em;
+  --tracking-label: 0.14em;
+  --tracking-overline: 0.22em;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-surface: var(--surface);
-  --color-surface-elevated: var(--surface-elevated);
-  --color-border: var(--border);
-  --font-sans: var(--font-primary);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono-body);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-primary), Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 300;
+  letter-spacing: var(--tracking-body);
 }
 
 * {
-  border-color: var(--border);
+  border-color: var(--border-subtle);
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+summary {
+  touch-action: manipulation;
+}
+
+.theme-font-fragile {
+  --font-display: var(--font-bebas-neue);
+  --font-body: var(--font-dm-sans);
+  --font-mono-body: var(--font-dm-mono);
 }
 
 .text-balance {
   text-wrap: balance;
 }
 
-.theme-font-geist {
-  --font-primary: var(--font-geist-sans);
-}
-
-.theme-font-space {
-  --font-primary: var(--font-space-grotesk);
-}
-
-.theme-font-inter {
-  --font-primary: var(--font-inter);
-}
-
-.grain-overlay {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.08;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.9) 0.35px, transparent 0.35px);
-  background-size: 3px 3px;
-  mask-image: radial-gradient(circle at center, black, transparent 85%);
-}
-
 @keyframes marquee {
   from {
-    transform: translateX(0%);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 0;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

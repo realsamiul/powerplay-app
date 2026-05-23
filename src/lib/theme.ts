@@ -1,11 +1,3 @@
-export const FONT_PRESET = "space-grotesk" as
-  | "geist"
-  | "space-grotesk"
-  | "inter";
+export const FONT_PRESET = "fragile" as const;
 
-export const fontPresetClass =
-  FONT_PRESET === "inter"
-    ? "theme-font-inter"
-    : FONT_PRESET === "space-grotesk"
-      ? "theme-font-space"
-      : "theme-font-geist";
+export const fontPresetClass = FONT_PRESET === "fragile" ? "theme-font-fragile" : "theme-font-fragile";

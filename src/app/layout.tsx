@@ -1,27 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
+import { Bebas_Neue, DM_Mono, DM_Sans } from "next/font/google";
 import { ClientOverlays } from "@/components/client-overlays";
 import { SiteNav } from "@/components/site-nav";
 import { fontPresetClass } from "@/lib/theme";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const displayFont = Bebas_Neue({
+  variable: "--font-bebas-neue",
+  weight: "400",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const bodyFont = DM_Sans({
+  variable: "--font-dm-sans",
+  weight: ["300", "400", "500"],
   subsets: ["latin"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
+const monoFont = DM_Mono({
+  variable: "--font-dm-mono",
+  weight: ["300", "400", "500"],
   subsets: ["latin"],
 });
 
@@ -38,11 +36,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${inter.variable} ${fontPresetClass} h-full antialiased`}
+      className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable} ${fontPresetClass} h-full antialiased`}
     >
-      <body className="min-h-full bg-black text-white">
+      <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
+      <body className="min-h-full bg-[var(--bg)] text-[var(--fg)]">
         <ClientOverlays />
-        <div className="grain-overlay" />
         <SiteNav />
         <main className="pb-28">{children}</main>
       </body>
