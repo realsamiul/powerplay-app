@@ -16,6 +16,8 @@
   --border-subtle: rgba(26, 24, 20, 0.08);
   --border-visible: rgba(26, 24, 20, 0.16);
   --border-accent: rgba(0, 106, 78, 0.35);
+  --cut-size: 20px;
+  --cut-corner: polygon(0 0, 100% 0, 100% 100%, var(--cut-size) 100%, 0 calc(100% - var(--cut-size)));
   --tracking-display: -0.02em;
   --tracking-heading: -0.01em;
   --tracking-body: 0em;
@@ -76,6 +78,24 @@ h2 {
 
 p {
   max-width: 75ch;
+}
+
+.shape-cut {
+  clip-path: var(--cut-corner);
+}
+
+.shape-border {
+  background-color: var(--border-visible);
+  padding: 1px;
+  clip-path: var(--cut-corner);
+  filter: drop-shadow(0 6px 16px rgba(26, 24, 20, 0.08));
+}
+
+.shape-inner {
+  background-color: var(--surface-0);
+  clip-path: var(--cut-corner);
+  height: 100%;
+  width: 100%;
 }
 
 @keyframes marquee {

@@ -12,8 +12,8 @@ type Props = {
 };
 
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789./-";
-const FRAME_DURATION = 40;
-const CYCLES_PER_CHAR = 8;
+const FRAME_DURATION = 35;
+const CYCLES_PER_CHAR = 4;
 
 export function SlotHeadline({
   text,
@@ -45,7 +45,7 @@ export function SlotHeadline({
         return;
       }
 
-      const startDelay = delay + charIndex * 35;
+      const startDelay = delay + charIndex * 20;
       const totalFrames = CYCLES_PER_CHAR + charIndex * 2;
 
       let frame = 0;
@@ -129,22 +129,26 @@ export function SlotHeadline({
         const wordChars = displayed.slice(startIndex, startIndex + word.length);
 
         return (
-          <span key={wIdx} className="inline-block whitespace-nowrap">
-            {wordChars.map((char, cIdx) => (
-              <span
-                key={cIdx}
-                aria-hidden="true"
-                className="inline-block"
-                style={{
-                  color: done ? "inherit" : "var(--accent)",
-                  transition: done ? "color 0.3s ease" : "none",
-                }}
-              >
-                {char}
-              </span>
-            ))}
+          <span key={wIdx} className="relative inline-block whitespace-nowrap">
+            <span className="invisible">{word}</span>
+
+            <span className="absolute inset-0 flex" aria-hidden="true">
+              {wordChars.map((char, cIdx) => (
+                <span
+                  key={cIdx}
+                  className="inline-block"
+                  style={{
+                    color: done ? "inherit" : "var(--accent)",
+                    transition: done ? "color 0.2s ease-out" : "none",
+                  }}
+                >
+                  {char}
+                </span>
+              ))}
+            </span>
+
             {wIdx < words.length - 1 ? (
-              <span className="inline-block" style={{ minWidth: "0.3em" }}>
+              <span className="inline-block" style={{ width: "0.25em" }}>
                 {" "}
               </span>
             ) : null}

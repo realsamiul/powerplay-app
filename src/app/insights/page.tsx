@@ -99,34 +99,36 @@ export default function InsightsPage() {
                 className={cn(getSpanClass(index), "group")}
               >
                 <article
-                  className="flex h-full flex-col justify-between rounded-2xl p-7 transition-colors duration-300 hover:bg-[var(--surface-2)] sm:p-10"
+                  className="shape-border group h-full transition-transform duration-300 hover:-translate-y-1"
                   aria-labelledby={`insight-${insight.card_id}`}
                 >
-                  <div className="flex flex-col gap-6">
-                    <div className="flex items-start justify-between">
-                      <span className="font-mono text-[13px] font-semibold uppercase tracking-[0.2em] text-[var(--accent-bright)]">
-                        {insight.player || "Target Analysis"}
-                      </span>
-                      <Icon className="h-5 w-5 text-[var(--fg-muted)] opacity-40 transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="shape-inner flex h-full flex-col justify-between bg-[var(--surface-0)] p-7 transition-colors duration-300 group-hover:bg-[var(--surface-1)] sm:p-10">
+                    <div className="flex flex-col gap-6">
+                      <div className="flex items-start justify-between">
+                        <span className="font-mono text-[13px] font-semibold uppercase tracking-[0.2em] text-[var(--accent-bright)]">
+                          {insight.player || "Target Analysis"}
+                        </span>
+                        <Icon className="h-5 w-5 text-[var(--fg-muted)] opacity-40 transition-opacity duration-300 group-hover:opacity-100" />
+                      </div>
+
+                      <div>
+                        <h3
+                          id={`insight-${insight.card_id}`}
+                          className="text-[clamp(28px,3.5vw,48px)] font-medium leading-[1.05] tracking-tight text-[var(--fg)]"
+                        >
+                          {insight.headline}
+                        </h3>
+                        <p className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--fg-muted)] sm:text-lg">
+                          {insight.text}
+                        </p>
+                      </div>
                     </div>
 
-                    <div>
-                      <h3
-                        id={`insight-${insight.card_id}`}
-                        className="text-[clamp(28px,3.5vw,48px)] font-medium leading-[1.05] tracking-tight text-[var(--fg)]"
-                      >
-                        {insight.headline}
-                      </h3>
-                      <p className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--fg-muted)] sm:text-lg">
-                        {insight.text}
-                      </p>
+                    <div className="mt-8 flex items-center gap-3 border-t border-[var(--border-subtle)] pt-6">
+                      <Badge variant="outline" className="border-[var(--accent)]/30 bg-transparent text-[11px] font-medium uppercase tracking-widest text-[var(--accent)]">
+                        {TECHNIQUE_COPY[insight.technique]}
+                      </Badge>
                     </div>
-                  </div>
-
-                  <div className="mt-8 flex items-center gap-3 border-t border-[var(--border-subtle)] pt-6">
-                    <Badge variant="outline" className="border-[var(--accent)]/30 bg-transparent text-[11px] font-medium uppercase tracking-widest text-[var(--accent)]">
-                      {TECHNIQUE_COPY[insight.technique]}
-                    </Badge>
                   </div>
                 </article>
               </BlurFade>

@@ -40,12 +40,14 @@ export default function ArchitecturePage() {
 
       <section className="relative z-10 w-full border-y border-[var(--border-visible)] bg-[var(--surface-1)] py-20">
         <div className="mx-auto max-w-[1700px] px-4 sm:px-8 md:px-12 lg:px-16">
-          <div className="grid grid-cols-2 gap-px border border-[var(--border-visible)] bg-[var(--border-visible)] md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             {architectureContent.numbers.map((num) => (
-              <div key={num.label} className="bg-[var(--bg)] p-6">
-                <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--fg-faint)]">{num.label}</p>
-                <p className="mt-3 text-5xl leading-none text-[var(--fg)]">{num.value}</p>
-                <p className="mt-2 font-mono text-[10px] uppercase tracking-widest text-[var(--accent-bright)]">{num.sub}</p>
+              <div key={num.label} className="shape-border h-full">
+                <div className="shape-inner flex h-full flex-col bg-[var(--surface-0)] p-6 transition-colors hover:bg-[var(--surface-1)]">
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--fg-faint)]">{num.label}</p>
+                  <p className="mt-3 text-5xl leading-none text-[var(--fg)]">{num.value}</p>
+                  <p className="mt-2 font-mono text-[10px] uppercase tracking-widest text-[var(--accent-bright)]">{num.sub}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -53,27 +55,29 @@ export default function ArchitecturePage() {
       </section>
 
       <section className="relative z-10 mx-auto mt-12 max-w-[1700px] px-4 sm:px-8 md:px-12 lg:px-16">
-        <div className="border border-[var(--border-visible)] bg-[var(--surface-1)] p-6 sm:p-8">
-          <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--fg-faint)]">End-to-End Pipeline</p>
-          <div className="mt-5 flex flex-wrap items-center gap-3">
-            {[
-              "Cricsheet Raw JSON",
-              "Physical-Logic Layer",
-              "Gold Record Store",
-              "XGBoost WP Models",
-              "VAEP Calculator",
-              "Narrative Cage",
-              "Next.js Edge",
-            ].map((step, i, arr) => (
-              <div key={step} className="flex items-center gap-3">
-                <div className="flex flex-col">
-                  <span className="whitespace-nowrap border border-[var(--border-visible)] bg-[var(--surface-0)] px-3 py-2 font-mono text-[11px] uppercase tracking-widest text-[var(--fg)]">
-                    {step}
-                  </span>
+        <div className="shape-border">
+          <div className="shape-inner bg-[var(--surface-1)] p-6 sm:p-8">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--fg-faint)]">End-to-End Pipeline</p>
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              {[
+                "Cricsheet Raw JSON",
+                "Physical-Logic Layer",
+                "Gold Record Store",
+                "XGBoost WP Models",
+                "VAEP Calculator",
+                "Narrative Cage",
+                "Next.js Edge",
+              ].map((step, i, arr) => (
+                <div key={step} className="flex items-center gap-3">
+                  <div className="flex flex-col">
+                    <span className="whitespace-nowrap border border-[var(--border-visible)] bg-[var(--surface-0)] px-3 py-2 font-mono text-[11px] uppercase tracking-widest text-[var(--fg)]">
+                      {step}
+                    </span>
+                  </div>
+                  {i < arr.length - 1 ? <span className="hidden text-[var(--accent)] sm:block">-&gt;</span> : null}
                 </div>
-                {i < arr.length - 1 ? <span className="hidden text-[var(--accent)] sm:block">-&gt;</span> : null}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

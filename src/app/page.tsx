@@ -97,14 +97,16 @@ export default function Home() {
         <p className="font-mono text-[11px] uppercase text-[var(--fg-faint)]" style={{ letterSpacing: "var(--tracking-overline)" }}>
           By the Numbers
         </p>
-        <div className="mt-8 grid grid-cols-2 gap-px border border-[var(--border-visible)] bg-[var(--border-visible)] sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {homeContent.numbers.map((num) => (
-            <div key={num.label} className="bg-[var(--surface-0)] p-6">
-              <p className="text-[clamp(32px,4vw,52px)] leading-none text-[var(--fg)]">{num.value}</p>
-              <p className="mt-4 text-sm font-medium text-[var(--fg)]">{num.label}</p>
-              <p className="mt-1 font-mono text-[10px] uppercase text-[var(--fg-faint)]" style={{ letterSpacing: "var(--tracking-label)" }}>
-                {num.sub}
-              </p>
+            <div key={num.label} className="shape-border h-full">
+              <div className="shape-inner flex h-full flex-col bg-[var(--surface-0)] p-6 transition-colors hover:bg-[var(--surface-1)]">
+                <p className="text-[clamp(32px,4vw,52px)] leading-none text-[var(--fg)]">{num.value}</p>
+                <p className="mt-4 text-sm font-medium text-[var(--fg)]">{num.label}</p>
+                <p className="mt-1 font-mono text-[10px] uppercase text-[var(--fg-faint)]" style={{ letterSpacing: "var(--tracking-label)" }}>
+                  {num.sub}
+                </p>
+              </div>
             </div>
           ))}
         </div>
