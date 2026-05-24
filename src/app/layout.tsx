@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, DM_Mono, DM_Sans } from "next/font/google";
 import { ClientOverlays } from "@/components/client-overlays";
 import { SiteNav } from "@/components/site-nav";
+import { SmoothScroll } from "@/components/smooth-scroll";
 import { fontPresetClass } from "@/lib/theme";
 import "./globals.css";
 
@@ -42,9 +43,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="min-h-full bg-[var(--bg)] text-[var(--fg)]">
-        <ClientOverlays />
-        <SiteNav />
-        <main className="pb-28">{children}</main>
+        <SmoothScroll>
+          <ClientOverlays />
+          <SiteNav />
+          <main className="pb-28">{children}</main>
+        </SmoothScroll>
       </body>
     </html>
   );
