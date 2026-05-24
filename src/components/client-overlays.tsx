@@ -2,7 +2,6 @@
 
 import { useSyncExternalStore } from "react";
 import { PixelPageTransition } from "@/components/pixel-page-transition";
-import { SitePreloader } from "@/components/site-preloader";
 
 function subscribe() {
   return () => {};
@@ -23,7 +22,6 @@ export function ClientOverlays() {
 
   return (
     <>
-      <SitePreloader />
       <PixelPageTransition />
     </>
   );
