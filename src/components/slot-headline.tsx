@@ -115,6 +115,7 @@ export function SlotHeadline({
   }, [animate, reduceMotion, text, triggerOnMount]);
 
   const Component = elementTag;
+  const words = text.split(" ");
 
   return (
     <Component
@@ -123,20 +124,33 @@ export function SlotHeadline({
       aria-label={text}
       style={{ letterSpacing: "var(--tracking-display)", fontFamily: "var(--font-display)" }}
     >
-      {displayed.map((char, i) => (
-        <span
-          key={i}
-          aria-hidden="true"
-          className="inline-block"
-          style={{
-            minWidth: char === " " ? "0.3em" : "auto",
-            color: done ? "inherit" : "var(--accent)",
-            transition: done ? "color 0.3s ease" : "none",
-          }}
-        >
-          {char}
-        </span>
-      ))}
+      {words.map((word, wIdx) => {
+        const startIndex = words.slice(0, wIdx).reduce((sum, previousWord) => sum + previousWord.length + 1, 0);
+        const wordChars = displayed.slice(startIndex, startIndex + word.length);
+
+        return (
+          <span key={wIdx} className="inline-block whitespace-nowrap">
+            {wordChars.map((char, cIdx) => (
+              <span
+                key={cIdx}
+                aria-hidden="true"
+                className="inline-block"
+                style={{
+                  color: done ? "inherit" : "var(--accent)",
+                  transition: done ? "color 0.3s ease" : "none",
+                }}
+              >
+                {char}
+              </span>
+            ))}
+            {wIdx < words.length - 1 ? (
+              <span className="inline-block" style={{ minWidth: "0.3em" }}>
+                {" "}
+              </span>
+            ) : null}
+          </span>
+        );
+      })}
     </Component>
   );
 }

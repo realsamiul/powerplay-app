@@ -35,7 +35,7 @@ export function SitePreloader() {
       if (cancelled) return;
       setProgress(100);
       const elapsed = performance.now() - startedAt;
-      const wait = Math.max(0, 400 - elapsed);
+      const wait = Math.max(0, 1500 - elapsed);
       window.setTimeout(() => {
         if (cancelled) return;
         sessionStorage.setItem("cricsight-loaded", "true");
@@ -75,7 +75,7 @@ export function SitePreloader() {
               <motion.div
                 className="h-2 bg-[var(--accent)]"
                 animate={{ width: `${progress}%` }}
-                transition={{ duration: 0.2, ease: "linear" }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
               />
             </div>
             <p className="mt-2 text-right font-mono text-xs tabular-nums text-[var(--fg-muted)]">{progress}%</p>

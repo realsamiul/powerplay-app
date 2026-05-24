@@ -65,7 +65,7 @@ export default function InsightsPage() {
       </section>
 
       <section className="space-y-2 pb-20 pt-4">
-        <Marquee duration="36s">
+        <Marquee duration="120s">
           {OPTA_STATS.map((stat) => (
             <span
               key={`row-a-${stat.stat_id}`}
@@ -75,7 +75,7 @@ export default function InsightsPage() {
             </span>
           ))}
         </Marquee>
-        <Marquee reverse duration="52s">
+        <Marquee reverse duration="160s">
           {OPTA_STATS.map((stat) => (
             <span
               key={`row-b-${stat.stat_id}`}
@@ -124,7 +124,7 @@ export default function InsightsPage() {
                   </div>
 
                   <div className="mt-8 flex items-center gap-3 border-t border-[var(--border-subtle)] pt-6">
-                    <Badge variant="outline" className="bg-transparent text-[11px] uppercase tracking-widest text-[var(--fg-faint)]">
+                    <Badge variant="outline" className="border-[var(--accent)]/30 bg-transparent text-[11px] font-medium uppercase tracking-widest text-[var(--accent)]">
                       {TECHNIQUE_COPY[insight.technique]}
                     </Badge>
                   </div>

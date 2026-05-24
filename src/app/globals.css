@@ -4,8 +4,8 @@
   --bg: #F4EFE6;
   --bg-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
   --fg: #1a1814;
-  --fg-muted: #6b6459;
-  --fg-faint: #b0a898;
+  --fg-muted: #4a453e;
+  --fg-faint: #787165;
   --accent: #006a4e;
   --accent-bright: #008a65;
   --accent-dim: rgba(0, 106, 78, 0.12);

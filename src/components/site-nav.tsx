@@ -41,7 +41,7 @@ export function SiteNav() {
                 className={cn(
                   "flex min-h-[44px] items-center justify-center rounded-md px-2 py-2 text-center text-[11px] uppercase transition-all duration-200 sm:text-xs",
                   active
-                    ? "bg-[var(--accent)] font-medium text-[var(--fg)] shadow-sm"
+                    ? "bg-[var(--accent)] font-medium text-[var(--bg)] shadow-sm"
                     : "text-[var(--fg)] opacity-70 hover:bg-[var(--accent)]/10 hover:opacity-100",
                 )}
                 style={{ letterSpacing: "var(--tracking-label)" }}
