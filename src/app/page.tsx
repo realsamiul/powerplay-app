@@ -64,7 +64,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
             <div>
               <BlurFade variant="slide">
-                <h2 className="text-[clamp(40px,5vw,80px)] leading-[0.9] text-[var(--fg)]">{homeContent.duality.headline}</h2>
+                <h2 className="text-[clamp(48px,8vw,120px)] leading-[0.88] text-[var(--fg)]">{homeContent.duality.headline}</h2>
               </BlurFade>
             </div>
             <div>
@@ -76,7 +76,7 @@ export default function Home() {
 
       <section className="section-gap mx-auto max-w-[1700px] px-4 sm:px-8 md:px-12 lg:px-16">
         <div className="mb-16">
-          <h2 className="text-[clamp(48px,6vw,96px)] leading-[0.9] text-[var(--fg)]">{homeContent.guide.headline}</h2>
+          <h2 className="text-[clamp(48px,8vw,120px)] leading-[0.88] text-[var(--fg)]">{homeContent.guide.headline}</h2>
           <p className="mt-6 text-xl text-[var(--fg-muted)]">{homeContent.guide.body}</p>
         </div>
 

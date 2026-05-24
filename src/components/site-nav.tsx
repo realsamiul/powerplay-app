@@ -29,8 +29,8 @@ export function SiteNav() {
       className="fixed left-1/2 z-50 w-[min(1100px,95vw)] -translate-x-1/2 transition-transform"
       style={{ bottom: "max(1rem, env(safe-area-inset-bottom))", paddingBottom: "max(0.5rem, env(safe-area-inset-bottom))" }}
     >
-      <div className="shape-border w-full">
-        <div className="shape-inner grid grid-cols-[1fr_auto] items-center gap-3 bg-[var(--surface-1)] px-2 py-2 sm:px-3">
+      <div className="nav-shape-border w-full">
+        <div className="nav-shape-inner grid grid-cols-[1fr_auto] items-center gap-3 px-2 py-2 sm:px-3">
           <div className="grid w-full grid-cols-3 gap-1">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href;
@@ -43,7 +43,7 @@ export function SiteNav() {
                     "flex min-h-[44px] items-center justify-center rounded-md px-2 py-2 text-center text-[11px] uppercase transition-all duration-200 sm:text-xs",
                     active
                       ? "bg-[var(--accent)] font-medium text-[var(--bg)] shadow-sm"
-                      : "text-[var(--fg)] opacity-70 hover:bg-[var(--accent)]/10 hover:opacity-100",
+                      : "text-[var(--bg)] opacity-75 hover:bg-white/10 hover:opacity-100",
                   )}
                   style={{ letterSpacing: "var(--tracking-label)" }}
                 >
@@ -53,7 +53,7 @@ export function SiteNav() {
               );
             })}
           </div>
-          <div className="pr-2 font-mono text-xs text-[var(--fg-muted)]">{dateStamp}</div>
+          <div className="pr-2 font-mono text-xs text-[var(--bg)] opacity-70">{dateStamp}</div>
         </div>
       </div>
     </nav>
