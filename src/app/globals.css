@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #05070A;
-  --bg-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E");
-  --bg-glow: radial-gradient(circle at 80% 20%, rgba(0, 229, 163, 0.08) 0%, transparent 50%), radial-gradient(circle at 10% 80%, rgba(38, 122, 72, 0.06) 0%, transparent 60%);
-  --fg: #F4EFE6;
-  --fg-muted: #A3A9B6;
-  --fg-faint: #5E6573;
-  --accent: #00E5A3;
-  --accent-bright: #00FFC2;
-  --accent-dim: rgba(0, 229, 163, 0.08);
-  --surface-0: rgba(11, 15, 23, 0.45);
-  --surface-1: rgba(18, 24, 35, 0.65);
-  --surface-2: rgba(25, 34, 48, 0.85);
-  --surface-hover: rgba(32, 44, 61, 0.9);
-  --border-subtle: rgba(255, 255, 255, 0.04);
-  --border-visible: rgba(0, 229, 163, 0.12);
-  --border-accent: rgba(0, 229, 163, 0.35);
+  --bg: #FAF9F5;
+  --bg-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");
+  --bg-glow: radial-gradient(circle at 80% 20%, rgba(0, 229, 163, 0.03) 0%, transparent 50%), radial-gradient(circle at 10% 80%, rgba(38, 122, 72, 0.02) 0%, transparent 60%);
+  --fg: #111111;
+  --fg-muted: #4A4F5A;
+  --fg-faint: #7D8494;
+  --accent: #006A4E;
+  --accent-bright: #008A65;
+  --accent-dim: rgba(0, 106, 78, 0.08);
+  --surface-0: rgba(255, 255, 255, 0.48);
+  --surface-1: rgba(255, 255, 255, 0.78);
+  --surface-2: rgba(244, 239, 230, 0.85);
+  --surface-hover: rgba(255, 255, 255, 0.95);
+  --border-subtle: rgba(0, 0, 0, 0.04);
+  --border-visible: rgba(0, 106, 78, 0.12);
+  --border-accent: rgba(0, 106, 78, 0.35);
   --cut-size: 20px;
   --cut-corner: polygon(0 0, 100% 0, 100% 100%, var(--cut-size) 100%, 0 calc(100% - var(--cut-size)));
-  --tracking-display: -0.03em;
-  --tracking-heading: -0.02em;
+  --tracking-display: -0.02em;
+  --tracking-heading: -0.01em;
   --tracking-body: 0.01em;
-  --tracking-label: 0.16em;
-  --tracking-overline: 0.24em;
+  --tracking-label: 0.14em;
+  --tracking-overline: 0.22em;
 }
 
 @theme inline {
@@ -69,8 +69,8 @@ summary {
 }
 
 .section-gap {
-  padding-top: clamp(64px, 8vw, 120px);
-  padding-bottom: clamp(48px, 6vw, 96px);
+  padding-top: clamp(96px, 12vw, 180px);
+  padding-bottom: clamp(80px, 10vw, 144px);
 }
 
 h1,
@@ -90,7 +90,7 @@ p {
   background-color: var(--border-subtle);
   padding: 1px;
   clip-path: var(--cut-corner);
-  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.28));
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.04));
 }
 
 .shape-inner {
