@@ -1,0 +1,406 @@
+{
+  "meta": {
+    "name": "Powerplay Obsidian Emerald DNA",
+    "description": "A synthesized premium design profile combining the editorial typography of Locomotive.ca with the glassmorphic, bento-grid tech HUD aesthetic of Webisoft.com, tailored specifically for high-end sports and cricket analytics.",
+    "source_references": [
+      "https://locomotive.ca/",
+      "https://webisoft.com/"
+    ],
+    "created_at": "2026-05-26T14:42:00Z"
+  },
+  "design_system": {
+    "color": {
+      "palette_type": "analogous",
+      "primary": {
+        "hex": "#05070A",
+        "role": "Main background base, delivering deep, immersive dark canvas depth."
+      },
+      "secondary": {
+        "hex": "#387a48",
+        "role": "Forest emerald green, acting as structural headers and category borders."
+      },
+      "accent": {
+        "hex": "#00E5A3",
+        "role": "Electric mint-emerald neon, highlighting active elements, live score tick numbers, and CTAs."
+      },
+      "neutral": {
+        "scale": [
+          "#05070A",
+          "#0B0F17",
+          "#121823",
+          "#5E6573",
+          "#A3A9B6",
+          "#F4EFE6"
+        ],
+        "usage": "Light cream ivory (#F4EFE6) for high-contrast primary text, slate greys for muted parameters and labels, and deep obsidian variants for surfaces and cards."
+      },
+      "semantic": {
+        "success": "#00FFC2",
+        "warning": "#FFB800",
+        "error": "#FF4B4B",
+        "info": "#00F2FF"
+      },
+      "surface": {
+        "background": "#05070A",
+        "card": "rgba(11, 15, 23, 0.45)",
+        "elevated": "rgba(18, 24, 35, 0.65)"
+      },
+      "contrast_strategy": "dark-on-light dominant for small labels, high contrast white-ivory text on dark obsidian-emerald layers for main content blocks to ensure WCAG 2.1 AAA compliance."
+    },
+    "typography": {
+      "type_scale": {
+        "display": {
+          "size": "71.11px",
+          "weight": "500",
+          "line_height": "64px",
+          "tracking": "-0.03em"
+        },
+        "heading_1": {
+          "size": "48.88px",
+          "weight": "500",
+          "line_height": "48.88px",
+          "tracking": "-0.02em"
+        },
+        "heading_2": {
+          "size": "37.33px",
+          "weight": "500",
+          "line_height": "37.33px",
+          "tracking": "-0.02em"
+        },
+        "heading_3": {
+          "size": "22.50px",
+          "weight": "700",
+          "line_height": "36px",
+          "tracking": "-0.01em"
+        },
+        "body": {
+          "size": "15px",
+          "weight": "400",
+          "line_height": "24px",
+          "tracking": "0.01em"
+        },
+        "body_small": {
+          "size": "12px",
+          "weight": "400",
+          "line_height": "13.2px",
+          "tracking": "0.02em"
+        },
+        "caption": {
+          "size": "10px",
+          "weight": "400",
+          "line_height": "10px",
+          "tracking": "0.04em"
+        },
+        "overline": {
+          "size": "11px",
+          "weight": "500",
+          "line_height": "11px",
+          "tracking": "0.24em"
+        }
+      },
+      "font_families": {
+        "heading": "var(--font-bebas-neue), HelveticaNowDisplay, sans-serif",
+        "body": "var(--font-dm-sans), HelveticaNowText, sans-serif",
+        "mono": "var(--font-dm-mono), SuisseIntlMono, monospace"
+      },
+      "font_style_notes": "Heavy display headers with extreme negative tracking (-0.03em) and compressed line heights, contrasted with highly readable sans-serif body copy and Suisse monospaced technical metric digits."
+    },
+    "spacing": {
+      "base_unit": "4px",
+      "scale": [
+        "4px",
+        "8px",
+        "12px",
+        "16px",
+        "24px",
+        "32px",
+        "48px",
+        "64px",
+        "96px"
+      ],
+      "content_density": "comfortable",
+      "section_rhythm": "Generous vertical clamps ranging from 64px on mobile up to 120px on desktops to isolate complex data containers and provide visual breathing room."
+    },
+    "layout": {
+      "grid_system": "12-column dynamic CSS grid",
+      "max_content_width": "1700px",
+      "columns": "12",
+      "gutter": "16px on mobile, 32px on desktop",
+      "breakpoints": {
+        "mobile": "480px",
+        "tablet": "768px",
+        "desktop": "1024px",
+        "large_desktop": "1450px"
+      },
+      "alignment_tendency": "asymmetric"
+    },
+    "shape": {
+      "border_radius": {
+        "small": "4px",
+        "medium": "8px",
+        "large": "16px",
+        "pill": "9999px"
+      },
+      "border_usage": "subtle 1px border overlays styled as linear light gradients with low opacity (4%)",
+      "divider_style": "1px solid rgba(255, 255, 255, 0.05)"
+    },
+    "elevation": {
+      "shadow_style": "layered deep soft drop",
+      "levels": {
+        "low": "0 2px 8px rgba(0, 0, 0, 0.12)",
+        "medium": "0 8px 32px rgba(0, 0, 0, 0.24)",
+        "high": "0 16px 64px rgba(0, 0, 0, 0.48)"
+      },
+      "depth_cues": "blur/glass backdrops, overlapping absolute grids, and soft drop shadows to create a layered tech stack feel"
+    },
+    "iconography": {
+      "style": "stroke outline",
+      "stroke_weight": "1.5px",
+      "size_scale": [
+        "14px",
+        "18px",
+        "24px",
+        "32px"
+      ],
+      "preferred_set": "Lucide React / Feather icons"
+    },
+    "motion": {
+      "easing": "cubic-bezier(0.25, 1, 0.5, 1) (out-default), cubic-bezier(1, 0, 0, 1) (inOut-strong)",
+      "duration_scale": {
+        "micro": "150ms",
+        "normal": "350ms",
+        "macro": "550ms"
+      },
+      "entrance_pattern": "y-axis offset (staggered translateY slide-up) with custom spring curves",
+      "exit_pattern": "opacity fade out with micro-scale down",
+      "philosophy": "cinematic and fluid motion that serves to explain transitions and establish page state without interrupting fast data scans"
+    },
+    "components": {
+      "button_style": "translucent border frames with neon mint scaling outlines on hover, or flat dark solid blocks with spring-staggered typography",
+      "input_style": "minimalist dark fields with 1px border lines, focus glows, and monospaced placeholder cues",
+      "card_style": "glassmorphic bento panels utilizing 16px frosted backdrops, subtle 1px border highlights, and 20px custom corner cuts",
+      "navigation_pattern": "floating glassmorphic bottom bar nested in safe-area-inset with centered, responsive column-based navigation links",
+      "modal_style": "translucent screen takeovers with staggered pixel grid fade-ins and scale-reveal containers",
+      "list_style": "border-separated rows with monospaced counters, subtle hover light states, and right-aligned action tags",
+      "component_notes": "All interactive triggers and buttons have tactile, physical-click animations to reinforce standard app behaviors."
+    }
+  },
+  "design_style": {
+    "aesthetic": {
+      "mood": [
+        "mysterious",
+        "technical",
+        "luxurious",
+        "energetic",
+        "meticulous"
+      ],
+      "visual_metaphor": "A glowing, high-performance athletic dashboard overlaying a deep nocturnal stadium background.",
+      "era_influence": "2026 High-Contrast Neo-Brutalism and Glassmorphic SaaS design.",
+      "genre": "luxury software dashboard / premium sports analytics",
+      "personality_traits": [
+        "confident",
+        "clinical",
+        "inspiring",
+        "cutting-edge"
+      ],
+      "adjectives": [
+        "immersive",
+        "tactile",
+        "sub-pixel",
+        "fluid",
+        "uncompromising"
+      ]
+    },
+    "visual_language": {
+      "complexity": "moderate",
+      "ornamentation": "subtle accents",
+      "whitespace_usage": "spacious and grid-bound",
+      "visual_weight_distribution": "asymmetric with heavy display focal points",
+      "focal_strategy": "single giant display metrics surrounded by dense statistical grids",
+      "contrast_level": "ultra-high tech contrast",
+      "texture_usage": "matte paper grain layered on top of digital gradients to provide organic texture"
+    },
+    "composition": {
+      "hierarchy_method": "typographic scale contrast and neon color accents",
+      "balance_type": "asymmetric",
+      "flow_direction": "horizontal scroll timelines and vertical bento grids",
+      "grouping_strategy": "modular bento box containers with crisp, sub-pixel borders",
+      "negative_space_role": "creates spatial breathing room and isolates vital score segments"
+    },
+    "imagery": {
+      "photo_treatment": "monochromatic or desaturated overlays with high-contrast emerald/cyan tint grids",
+      "illustration_style": "abstract vector layout wireframes and glowing wire overlays",
+      "graphic_elements": "radial glowing spotlights, monospaced borders, and sub-pixel lines",
+      "pattern_usage": "dynamic dot grids and micro-grid patterns",
+      "image_shape": "sharp-cornered with optional polygonal cut details"
+    },
+    "interaction_feel": {
+      "feedback_style": "tactile and reactive, giving physical feedback on clicks and hovers",
+      "hover_behavior": "glowing border transitions and subtle translate-up elevations",
+      "transition_personality": "smooth slide-glide and staggered pixel animations",
+      "loading_style": "rolling slot number tickers and pixel-grid preloaders",
+      "microinteraction_density": "high density of data-centric hovers"
+    },
+    "brand_voice_in_ui": {
+      "tone": "clinical, authoritative, yet inspiring",
+      "formality": "technical and professional",
+      "cta_style": "direct imperative with animated arrow indicators",
+      "empty_state_approach": "clean monospaced layout with minimal vectors",
+      "error_tone": "unambiguous and direct"
+    }
+  },
+  "visual_effects": {
+    "overview": {
+      "effect_intensity": "moderate",
+      "performance_tier": "medium",
+      "fallback_strategy": "fall back to pure CSS background colors and static layout grids on low-power devices",
+      "primary_technology": "Next.js, Tailwind, Framer Motion, and custom Canvas filters"
+    },
+    "background_effects": {
+      "type": "gradient-animation",
+      "description": "Subtle, slow-pulsing radial gradients simulating soft neon stadium spotlights reflecting off an organic dark obsidian pitch.",
+      "technology": "CSS @keyframes and GPU-accelerated radial gradients",
+      "params": {
+        "color_palette": [
+          "rgba(0, 229, 163, 0.08)",
+          "rgba(38, 122, 72, 0.06)"
+        ],
+        "speed": "20s slow loop",
+        "density": "sparse",
+        "opacity": "0.15",
+        "blend_mode": "screen"
+      }
+    },
+    "particle_systems": {
+      "enabled": false,
+      "type": "none",
+      "description": "Not active in this profile to preserve focus on heavy data visuals.",
+      "technology": "none",
+      "params": {
+        "count": "0",
+        "shape": "none",
+        "size_range": "none",
+        "movement_pattern": "none",
+        "color_behavior": "none",
+        "interaction": "none",
+        "spawn_area": "none"
+      }
+    },
+    "3d_elements": {
+      "enabled": false,
+      "type": "none",
+      "description": "Represented as styled 2D vectors and CSS layouts rather than heavy active WebGL scenes to ensure ultra-lightweight mobile load times.",
+      "technology": "none",
+      "params": {
+        "renderer": "none",
+        "lighting": "none",
+        "camera": "none",
+        "materials": "none",
+        "geometry": "none",
+        "post_processing": "none",
+        "interaction_model": "none"
+      }
+    },
+    "shader_effects": {
+      "enabled": false,
+      "type": "none",
+      "description": "Bypassed on main routes, simulating glowing visual aberrations using CSS filter backdrops instead.",
+      "technology": "none",
+      "params": {
+        "uniforms": "none",
+        "vertex_manipulation": "none",
+        "fragment_output": "none",
+        "noise_type": "none",
+        "distortion": "none"
+      }
+    },
+    "scroll_effects": {
+      "parallax": {
+        "enabled": true,
+        "layers": "2",
+        "depth_range": "1.5px to 4px translate shifts",
+        "speed_curve": "ease-out"
+      },
+      "scroll_triggered_animations": {
+        "enabled": true,
+        "trigger_points": "on-scroll intersection markers",
+        "animation_type": "staggered translateY slide-up",
+        "scrub_behavior": "smooth glide"
+      },
+      "scroll_morphing": {
+        "enabled": false,
+        "description": "none"
+      }
+    },
+    "text_effects": {
+      "type": "split-letter-animate",
+      "description": "Headlines roll and reveal character-by-character on page transition exits and entries, creating a highly cinematic mechanical load effect.",
+      "technology": "Framer Motion",
+      "params": {
+        "split_strategy": "by-char",
+        "animation_per_unit": "translateY up with scale",
+        "stagger": "0.008s",
+        "effect_style": "mechanical rolling scoreboard"
+      }
+    },
+    "cursor_effects": {
+      "enabled": false,
+      "type": "none",
+      "description": "Standard pointer default preserved to allow precise mouse selections on high-density stats tables.",
+      "params": {
+        "shape": "none",
+        "size": "none",
+        "blend_mode": "none",
+        "trail": "none",
+        "interaction_zone": "none"
+      }
+    },
+    "image_effects": {
+      "type": "parallax-tilt",
+      "description": "Grid items tilt and shift their focal depths based on cursor coordinates, creating sub-pixel physical volume inside the bento frame.",
+      "technology": "CSS Transform transitions",
+      "params": {
+        "filter_pipeline": "desaturate + brightness scale",
+        "hover_transform": "translateY(-4px) scale(1.01)",
+        "reveal_animation": "staggered fade-up",
+        "distortion_type": "none"
+      }
+    },
+    "glassmorphism_neumorphism": {
+      "enabled": true,
+      "style": "glass",
+      "params": {
+        "blur_radius": "16px",
+        "transparency": "0.45",
+        "border_treatment": "subtle 1px border gradient (white opacity 4%)",
+        "shadow_type": "layered deep soft drop",
+        "light_source_angle": "top-left"
+      }
+    },
+    "canvas_drawings": {
+      "enabled": false,
+      "type": "none",
+      "description": "Charts and scatter indicators are rendered using optimized SVG vectors and Tailwind rather than Canvas to ensure clean font scaling.",
+      "technology": "none",
+      "params": {
+        "draw_method": "none",
+        "animation_loop": "none",
+        "color_scheme": "none",
+        "responsiveness": "none",
+        "interaction": "none"
+      }
+    },
+    "svg_animations": {
+      "enabled": true,
+      "type": "path-draw",
+      "description": "The Wagon Wheel interactive field draws and connects bowling vector trajectories using glowing animated SVG paths when hovered.",
+      "params": {
+        "animation_method": "stroke-dashoffset transition",
+        "path_morphing": "none",
+        "stroke_animation": "neon path trace",
+        "filter_effects": "glowing drop-shadow filter"
+      }
+    },
+    "composite_notes": "The visual hierarchy is designed so that the neon mint active highlights and glowing probability dials pierce through the desaturated, translucent obsidian glass layers, creating a high-performance, clinical sports HUD feel."
+  }
+}

@@ -1,28 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #F4EFE6;
-  --bg-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
-  --fg: #1a1814;
-  --fg-muted: #342f29;
-  --fg-faint: #575047;
-  --accent: #006a4e;
-  --accent-bright: #008a65;
-  --accent-dim: rgba(0, 106, 78, 0.12);
-  --surface-0: #F4EFE6;
-  --surface-1: #EDE8DC;
-  --surface-2: #E5DFD2;
-  --surface-hover: #DDD7C9;
-  --border-subtle: rgba(26, 24, 20, 0.08);
-  --border-visible: rgba(26, 24, 20, 0.16);
-  --border-accent: rgba(0, 106, 78, 0.35);
+  --bg: #05070A;
+  --bg-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E");
+  --bg-glow: radial-gradient(circle at 80% 20%, rgba(0, 229, 163, 0.08) 0%, transparent 50%), radial-gradient(circle at 10% 80%, rgba(38, 122, 72, 0.06) 0%, transparent 60%);
+  --fg: #F4EFE6;
+  --fg-muted: #A3A9B6;
+  --fg-faint: #5E6573;
+  --accent: #00E5A3;
+  --accent-bright: #00FFC2;
+  --accent-dim: rgba(0, 229, 163, 0.08);
+  --surface-0: rgba(11, 15, 23, 0.45);
+  --surface-1: rgba(18, 24, 35, 0.65);
+  --surface-2: rgba(25, 34, 48, 0.85);
+  --surface-hover: rgba(32, 44, 61, 0.9);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-visible: rgba(0, 229, 163, 0.12);
+  --border-accent: rgba(0, 229, 163, 0.35);
   --cut-size: 20px;
   --cut-corner: polygon(0 0, 100% 0, 100% 100%, var(--cut-size) 100%, 0 calc(100% - var(--cut-size)));
-  --tracking-display: -0.02em;
-  --tracking-heading: -0.01em;
-  --tracking-body: 0em;
-  --tracking-label: 0.14em;
-  --tracking-overline: 0.22em;
+  --tracking-display: -0.03em;
+  --tracking-heading: -0.02em;
+  --tracking-body: 0.01em;
+  --tracking-label: 0.16em;
+  --tracking-overline: 0.24em;
 }
 
 @theme inline {
@@ -36,8 +37,9 @@ html {
 
 body {
   background: var(--bg);
-  background-image: var(--bg-grain);
-  background-repeat: repeat;
+  background-image: var(--bg-glow), var(--bg-grain);
+  background-repeat: no-repeat, repeat;
+  background-size: cover, auto;
   color: var(--fg);
   font-family: var(--font-body), sans-serif;
   font-weight: 300;
@@ -85,14 +87,16 @@ p {
 }
 
 .shape-border {
-  background-color: var(--border-visible);
+  background-color: var(--border-subtle);
   padding: 1px;
   clip-path: var(--cut-corner);
-  filter: drop-shadow(0 6px 16px rgba(26, 24, 20, 0.08));
+  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.28));
 }
 
 .shape-inner {
   background-color: var(--surface-0);
+  backdrop-filter: blur(16px) saturate(135%);
+  -webkit-backdrop-filter: blur(16px) saturate(135%);
   clip-path: var(--cut-corner);
   height: 100%;
   width: 100%;

@@ -3,6 +3,7 @@ import type { AdvancedInsight } from "@/lib/cricsight-data";
 export const NAV_LINKS = [
   { href: "/", label: "Home", mobileLabel: "Home" },
   { href: "/insights", label: "Insights", mobileLabel: "Stats" },
+  { href: "/match", label: "Match Center", mobileLabel: "Live" },
   { href: "/architecture", label: "Architecture", mobileLabel: "Arch." },
 ] as const;
 

@@ -31,7 +31,7 @@ export function SiteNav() {
     >
       <div className="nav-shape-border w-full">
         <div className="nav-shape-inner grid grid-cols-[1fr_auto] items-center gap-3 px-2 py-2 sm:px-3">
-          <div className="grid w-full grid-cols-3 gap-1">
+          <div className="grid w-full grid-cols-4 gap-1">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href;
               return (
